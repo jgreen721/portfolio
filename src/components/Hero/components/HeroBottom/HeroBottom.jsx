@@ -7,7 +7,7 @@ const HeroBottom = () => {
             <div className="header-layer-content">
                 <div className="top-flex-row">
                     <div className="captions-box">
-                    <div className="caption-div">
+                        <div className="caption-div">
                             <h3><span className="bold">I</span>lluminate</h3>
                         </div>
                         <div className="caption-div">
