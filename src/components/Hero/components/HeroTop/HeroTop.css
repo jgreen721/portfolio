@@ -7,7 +7,13 @@
 @property --percentY {
   syntax: "<percentage>";
   inherits: false;
-  initial-value: 50%;
+  initial-value: -50%;
+}
+
+@property --circleSize {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
 }
 
 .header-layer-top {
@@ -16,28 +22,20 @@
   position: absolute;
   inset: 0;
   z-index: 5;
-  --circleSize: 20%;
+  --circleSize: 0%;
+
   clip-path: circle(var(--circleSize) at var(--percentX) var(--percentY));
-  animation: movespotlight 4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation: movespotlight 1s 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    forwards;
+}
+
+@keyframes scaleup {
+  100% {
+    transform: scaleY(1);
+  }
 }
 
 @keyframes movespotlight {
-  0% {
-    --percentX: 0%;
-    --percentY: 0%;
-  }
-  25% {
-    --percentX: 25%;
-    --percentY: 100%;
-  }
-  50% {
-    --percentX: 75%;
-    --percentY: 0%;
-  }
-  75% {
-    --percentX: 95%;
-    --percentY: 95%;
-  }
   100% {
     --percentX: 50%;
     --percentY: 50%;
