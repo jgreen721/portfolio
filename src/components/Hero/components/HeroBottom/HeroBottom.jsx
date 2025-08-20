@@ -22,7 +22,7 @@ const HeroBottom = () => {
                     </div>
                 </div>
                 <div className="h1-title-div">
-                    <h1 className="h1-title">
+                    <h1 className="h1-title h1-title-bottom">
                         <span>D</span>
                         <span>e</span>
                         <span>v</span>
