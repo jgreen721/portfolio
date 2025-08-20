@@ -1,0 +1,19 @@
+.app[data-theme="light"] {
+}
+.app[data-theme="dark"] {
+}
+
+.app {
+  min-height: 100%;
+  --primaryFont: var(--mozillaText);
+  --secondaryFont: var(--outfitText);
+}
+
+.app-content {
+  max-width: 144rem;
+  height: 100%;
+  margin: 0 auto;
+  border: 2px solid red;
+  position: relative;
+  background: red;
+}
