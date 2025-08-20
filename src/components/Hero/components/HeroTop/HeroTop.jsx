@@ -1,9 +1,9 @@
 import React from 'react'
 import "./HeroTop.css"
 
-const HeroTop = () => {
+const HeroTop = ({circleSize}) => {
   return (
-    <div className="header-layer header-layer-top">
+    <div style={{"--circleSize":circleSize}} className="header-layer header-layer-top">
             <div className="header-layer-content">
                 <div className="top-flex-row">
                     <div className="captions-box">

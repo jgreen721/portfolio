@@ -1,10 +1,47 @@
+@property --percentX {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+
+@property --percentY {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+
 .header-layer-top {
   background: white;
   color: black;
   position: absolute;
   inset: 0;
   z-index: 5;
-  clip-path: circle(20% at 50% 50%);
+  --circleSize: 20%;
+  clip-path: circle(var(--circleSize) at var(--percentX) var(--percentY));
+  animation: movespotlight 4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes movespotlight {
+  0% {
+    --percentX: 0%;
+    --percentY: 0%;
+  }
+  25% {
+    --percentX: 25%;
+    --percentY: 100%;
+  }
+  50% {
+    --percentX: 75%;
+    --percentY: 0%;
+  }
+  75% {
+    --percentX: 95%;
+    --percentY: 95%;
+  }
+  100% {
+    --percentX: 50%;
+    --percentY: 50%;
+  }
 }
 
 .top-flex-h1-top,

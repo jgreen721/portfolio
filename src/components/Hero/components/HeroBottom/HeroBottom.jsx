@@ -11,7 +11,7 @@ const HeroBottom = () => {
                             <h3><span className="bold">I</span>lluminate</h3>
                         </div>
                         <div className="caption-div">
-                            <h3><span className="bold">Y</span>our Path</h3>
+                            <h3><span className="bold">Y</span><em className="em-h3">our</em> Path</h3>
                         </div>
                         <div className="caption-div">
                             <h3><span className="bold">T</span>o Success</h3>

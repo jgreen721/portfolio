@@ -2,11 +2,11 @@ import React from 'react'
 import {HeroTop,HeroBottom} from "./components"
 import "./Hero.css"
 
-const Hero = () => {
+const Hero = ({circleSize}) => {
   return (
     <header className="header">
   <HeroBottom/>
-  <HeroTop/>
+  <HeroTop circleSize={circleSize}/>
 
     </header>
   )
