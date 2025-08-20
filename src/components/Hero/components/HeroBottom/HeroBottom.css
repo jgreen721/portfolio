@@ -1,0 +1,12 @@
+.header-layer-bottom {
+  position: relative;
+  background: black;
+  color: white;
+}
+
+.top-flex-h1-bottom,
+.h1-quotes-bottom {
+  color: black;
+  text-shadow: 1px 0px 0px white, -1px 0px 0px white, 0px 1px 0px white,
+    0px -1px 0px white;
+}
