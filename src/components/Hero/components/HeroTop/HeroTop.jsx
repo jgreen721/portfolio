@@ -14,7 +14,7 @@ const HeroTop = ({circleSize}) => {
                             <h3><span className="bold">Y</span>our Path</h3>
                         </div>
                         <div className="caption-div">
-                            <h3><span className="bold">T</span>o Success</h3>
+                            <h3><span className="bold">T</span>o <span className="shiny-success">Success</span></h3>
                         </div>
                     </div>
                     <div className="top-flex-title-div">

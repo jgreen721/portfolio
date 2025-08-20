@@ -19,6 +19,11 @@
   /* border: 4px solid red; */
 }
 
+.shiny-success {
+  text-shadow: 2px 2px 5px white;
+  /* color: red; */
+}
+
 .top-flex-row {
   display: flex;
   justify-content: space-between;
