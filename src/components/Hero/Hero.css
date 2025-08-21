@@ -1,13 +1,14 @@
 .header {
-  /* border: 5px solid pink; */
   position: relative;
   font-family: var(--primaryFont);
+  height: 100vh;
 }
 
 .header-layer {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 
 .header-layer-content {

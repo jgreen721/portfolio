@@ -19,13 +19,11 @@
 .header-layer-top {
   background: white;
   background: linear-gradient(rgb(235, 235, 235), rgb(200, 200, 200));
-
   color: black;
   position: absolute;
   inset: 0;
   z-index: 5;
   --circleSize: 0%;
-
   clip-path: circle(var(--circleSize) at var(--percentX) var(--percentY));
   animation: movespotlight 1s 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     forwards;
@@ -47,6 +45,7 @@
 .top-flex-h1-top,
 .h1-quotes-top {
   color: white;
+  color: rgb(210, 210, 210);
   position: relative;
   text-shadow: 1px 0px 0px black, -1px 0px 0px black, 0px 1px 0px black,
     0px -1px 0px black;

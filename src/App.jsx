@@ -1,11 +1,11 @@
 import {useState} from "react"
-import {Hero,Samples} from "./components"
+import {Hero,Samples,Scene} from "./components"
 import './App.css'
 
 function App() {
   const [theme,setTheme] = useState("light")
   const [circleSize,setCircleSize] = useState("20%")
-  
+
 
 
 
@@ -24,6 +24,7 @@ function App() {
     <div data-them={theme} className="app">
       <div className="app-content">
           <Hero circleSize={circleSize}/>
+          <Scene/>
           <Samples/>
       </div>
     </div>

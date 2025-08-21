@@ -11,19 +11,27 @@ const Samples = () => {
         {id:5,title:"Notifications",description:"From a static ui-design of a users notifcations to a responsive, authentic user-experience.",img:{desktop:notificationsDesktop,mobile:notificationsMobile},offset:3},
     ]
     const [samples,setSamples] = useState(samplesData);
+    const [focused,setFocused] = useState(samplesData.filter(s=>s.offset == 0)[0]);
 
 
     const handleCarousel=()=>{
       console.log("handle carousel fired!")
       setSamples((samples)=>samples.map((sample)=>sample.offset == -1 ? {...sample,offset:3} : {...sample,offset:sample.offset-1}));
+      let temp = samples.filter(s=>s.offset == 1)[0]
+      setFocused(temp);
     }
   return (
     <div onClick={handleCarousel} className="samples-container">
       <div className="samples-header">
-        <h1>Projects and Samples</h1>
+        <h1>Projects & Samples</h1>
       </div>
       <div className="samples-content">
-        <div className="samples-column samples-column-desktop"></div>
+        <div className="samples-column samples-info-column samples-column-desktop">
+          <div className="samples-info-content">
+          <h3>{focused.title}</h3>
+          <h5>{focused.description}</h5>
+          </div>
+        </div>
         <div className="samples-column">
           <ul className="samples-gallery">
             {samples.map(sample=>(
