@@ -15,6 +15,6 @@ export const codingConfDesktop = "/samples/codingconf/codingconfdesktop.png";
 export const codingConfMobile = "/samples/codingconf/codingconfmobile.png";
 
 export const notificationsDesktop =
-  "/samples/notifications/notificationsdesktop.png";
+  "/samples/notifications/notifications-desktop.png";
 export const notificationsMobile =
   "/samples/notifications/notificationsmobile.png";

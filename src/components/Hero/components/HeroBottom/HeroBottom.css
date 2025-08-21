@@ -1,6 +1,7 @@
 .header-layer-bottom {
   position: relative;
-  background: black;
+  /* background: black; */
+  /* background: linear-gradient(rgb(10, 10, 10), rgb(30, 30, 30)); */
   color: white;
   filter: blur(200px);
   transform: scale(0);

@@ -18,6 +18,8 @@
 
 .header-layer-top {
   background: white;
+  background: linear-gradient(rgb(235, 235, 235), rgb(200, 200, 200));
+
   color: black;
   position: absolute;
   inset: 0;
