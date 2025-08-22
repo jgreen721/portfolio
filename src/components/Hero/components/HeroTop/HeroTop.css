@@ -1,52 +1,30 @@
-@property --percentX {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 50%;
-}
-
 @property --percentY {
   syntax: "<percentage>";
   inherits: false;
   initial-value: -50%;
 }
 
-@property --circleSize {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 0%;
-}
-
 .header-layer-top {
-  background: white;
   background: linear-gradient(rgb(235, 235, 235), rgb(200, 200, 200));
   color: black;
   position: absolute;
   inset: 0;
-  z-index: 5;
-  --circleSize: 0%;
-  clip-path: circle(var(--circleSize) at var(--percentX) var(--percentY));
-  animation: movespotlight 1s 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+  clip-path: circle(var(--circleSize) at 50% var(--percentY));
+  animation: dropspotlight 1s 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     forwards;
 }
 
-@keyframes scaleup {
+@keyframes dropspotlight {
   100% {
-    transform: scaleY(1);
-  }
-}
-
-@keyframes movespotlight {
-  100% {
-    --percentX: 50%;
     --percentY: 50%;
   }
 }
 
 .top-flex-h1-top,
 .h1-quotes-top {
-  color: white;
   color: rgb(210, 210, 210);
   position: relative;
+  /* color: red; */
   text-shadow: 1px 0px 0px black, -1px 0px 0px black, 0px 1px 0px black,
     0px -1px 0px black;
 }

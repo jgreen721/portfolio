@@ -46,7 +46,89 @@
 }
 
 .laptop {
-  height: 400px;
-  width: 300px;
-  border: 2px solid white;
+  height: 450px;
+  width: 350px;
+  /* border: 2px solid white; */
+}
+
+.laptop-top {
+  height: 50%;
+  width: 100%;
+  /* border: 2px solid red; */
+  transform: rotateX(180deg);
+  transform-origin: bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  position: relative;
+  z-index: 5;
+}
+
+.unfold-laptop {
+  animation: unroll-laptop 2s 1s linear forwards;
+}
+
+.laptop-top-shell {
+  position: absolute;
+  inset: 0;
+  background: black;
+  transform: rotateX(180deg);
+  /* z-index: 5; */
+}
+
+.laptop-monitor {
+  width: calc(100% - 15px);
+  height: calc(100% - 15px);
+  /* border: 2px solid red; */
+  background: white;
+  box-shadow: 0px 0px 30px white;
+  position: relative;
+  z-index: 2;
+  border-radius: 0.25rem;
+}
+
+@keyframes unroll-laptop {
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.laptop-bottom {
+  height: 50%;
+  width: 100%;
+  /* border: 2px solid red; */
+  background: rgb(245, 245, 245);
+  position: relative;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  overflow: hidden;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.laptop-keyboard {
+  height: 55%;
+  width: 100%;
+  background: yellow;
+}
+
+.laptop-mouse-pad {
+  width: 50%;
+  height: 35%;
+  background: yellow;
+}
+
+.laptop-bottom-edge {
+  width: 100%;
+  height: 10px;
+  background: rgb(155, 155, 155);
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }

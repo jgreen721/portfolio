@@ -12,9 +12,10 @@ const AboutMe = () => {
       useEffect(()=>{
         if(inView){
           entry.target.querySelector(".about-me-cover").classList.add("drop-cover");
+          entry.target.querySelector(".laptop-top").classList.add("unfold-laptop");
           console.log(entry)
           }else{
-              
+
           }
       
       },[inView])
@@ -31,7 +32,17 @@ const AboutMe = () => {
             </header>
 
             <div className="about-me-content">
-                <div className="laptop"></div>
+                <div className="laptop">
+                    <div className="laptop-top">
+                        <div className="laptop-top-shell"></div>
+                        <div className="laptop-monitor"></div>
+                    </div>
+                    <div className="laptop-bottom">
+                        <div className="laptop-keyboard"></div>
+                        <div className="laptop-mouse-pad"></div>
+                        <div className="laptop-bottom-edge"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
