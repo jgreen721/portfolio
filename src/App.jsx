@@ -1,5 +1,5 @@
 import {useState} from "react"
-import {Hero,Samples,Scene} from "./components"
+import {Hero,AboutMe} from "./components"
 import './App.css'
 
 function App() {
@@ -10,7 +10,6 @@ function App() {
 
 
   onscroll=(e)=>{
-    // console.log(window.pageYOffset);
     let headerHeight = 550;
     let percent = (window.pageYOffset/headerHeight).toFixed(2);
     // console.log("percent",percent);
@@ -24,8 +23,7 @@ function App() {
     <div data-them={theme} className="app">
       <div className="app-content">
           <Hero circleSize={circleSize}/>
-          <Scene/>
-          <Samples/>
+          <AboutMe/>
       </div>
     </div>
   )

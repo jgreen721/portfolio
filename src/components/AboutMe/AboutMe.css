@@ -1,0 +1,28 @@
+.about-me-section {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  /* border: 2px solid red; */
+  position: relative;
+}
+
+.about-me-cover {
+  position: absolute;
+  background: lightgray;
+  inset: 0;
+  transform-origin: bottom;
+  /* clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); */
+}
+
+.drop-cover {
+  animation: dropcover 1.5s 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    forwards;
+}
+
+@keyframes dropcover {
+  100% {
+    transform: scaleY(0);
+  }
+}
