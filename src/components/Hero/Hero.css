@@ -16,7 +16,9 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  margin: 5rem 12rem;
+  height: 100%;
+  width: 100%;
+  padding: 5rem 12rem;
   /* border: 4px solid red; */
 }
 
@@ -29,20 +31,19 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 0 5rem;
   height: 175px;
-  /* border: 2px solid blue; */
+  padding: 0 5rem;
 }
 
 .top-flex-title-div {
   height: 100%;
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
 }
 
 .top-flex-h1 {
   font-size: 13.5rem;
+  line-height: 12rem;
 }
 
 .captions-box {
@@ -93,7 +94,7 @@
 
 @media screen and (max-width: 1150px) {
   .top-flex-row {
-    height: 100px;
+    height: 150px;
   }
   .top-flex-h1,
   .h1-quotes {
@@ -108,22 +109,13 @@
 }
 
 @media screen and (max-width: 650px) {
-  .header-layer {
-    /* padding: 5rem 1.2rem; */
-    /* border: 5px solid red; */
-  }
-
   .quotes-div {
     position: absolute;
     bottom: -3.5rem;
-    /* opacity: 0.85; */
-    /* bottom: -4rem; */
   }
 
   .header-layer-content {
-    width: 100%;
-    /* border: 4px solid orange; */
-    margin: 5rem 1.2rem;
+    padding: 2rem;
   }
   .top-flex-row {
     padding: 0rem 1rem;
@@ -141,7 +133,6 @@
 
   .top-flex-h1 {
     font-size: 4.5rem;
-    /* margin-right: 3rem; */
   }
 
   .blurb-div {

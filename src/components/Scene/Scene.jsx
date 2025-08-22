@@ -21,7 +21,7 @@ const Scene = () => {
     <div className="scene-container">
       <div className="scene-container-content">
         <div ref={ref} className="light-parent">
-          kdkd
+          
         </div>
       </div>
     </div>
