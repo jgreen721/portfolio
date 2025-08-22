@@ -13,18 +13,26 @@ const AboutMe = () => {
         if(inView){
           entry.target.querySelector(".about-me-cover").classList.add("drop-cover");
           console.log(entry)
-          
-        }
+          }else{
+              
+          }
       
       },[inView])
+
+
+  
   return (
     <div ref={ref} className="about-me-section">
         <div className="about-me-cover"></div>
-        <div className="about-me-content">
-            <header className="aboutme-header">
-            <h1>About</h1>
-            <h1>Me</h1>
+        <div className="about-me-content-container">
+            <header className="about-me-header">
+                <h1>About</h1>
+                <h1 className="reversed">Me</h1>
             </header>
+
+            <div className="about-me-content">
+                <div className="laptop"></div>
+            </div>
         </div>
     </div>
   )

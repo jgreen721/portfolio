@@ -55,6 +55,7 @@
 
 .caption-div h3 {
   font-weight: 200;
+  line-height: 4rem;
 }
 
 .em-h3 {
@@ -63,7 +64,7 @@
 
 .bold {
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
 .h1-title {
@@ -146,5 +147,9 @@
 
   .blurb-div p {
     font-size: 1.3rem;
+  }
+
+  .caption-div h3 {
+    line-height: 3rem;
   }
 }

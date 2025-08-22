@@ -2,10 +2,20 @@
   color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
   height: 75vh;
   /* border: 2px solid red; */
   position: relative;
+  padding: 2rem;
+  /* font-family:""; */
+}
+
+.about-me-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .about-me-cover {
@@ -13,7 +23,6 @@
   background: lightgray;
   inset: 0;
   transform-origin: bottom;
-  /* clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); */
 }
 
 .drop-cover {
@@ -21,8 +30,23 @@
     forwards;
 }
 
+.reversed {
+  background: white;
+  color: black;
+}
+
 @keyframes dropcover {
   100% {
     transform: scaleY(0);
   }
+}
+
+.about-me-content {
+  padding: 3rem 0;
+}
+
+.laptop {
+  height: 400px;
+  width: 300px;
+  border: 2px solid white;
 }
