@@ -1,6 +1,24 @@
 .app[data-theme="light"] {
+  --mainBg1: var(--white1);
+  --mainBg2: var(--white2);
+  --middleBg: var(--middlewhite);
+  --secondaryBg1: var(--black1);
+  --secondaryBg2: var(--black2);
+  --middleBg: var(--middleblack);
+  --middleColor: var(--middlewhite);
+  --mainColor: var(--black1);
+  --secondaryColor: var(--white1);
 }
 .app[data-theme="dark"] {
+  --mainBg1: var(--black1);
+  --mainBg2: var(--black2);
+  --middleBg: var(--middleblack);
+  --secondaryBg1: var(--white1);
+  --secondaryBg2: var(--white2);
+  --middleBg: var(--middlewhite);
+  --middleColor: var(--middleblack);
+  --mainColor: var(--white1);
+  --secondaryColor: var(--black1);
 }
 
 .app {
@@ -11,11 +29,10 @@
 .app-content {
   max-width: 144rem;
   margin: 0 auto;
-  border: 4px solid black;
   position: relative;
-  background: linear-gradient(rgb(10, 10, 10), rgb(40, 40, 40));
-  height: 300vh;
+  background: linear-gradient(var(--mainBg1), var(--mainBg2));
   font-family: var(--primaryFont);
-  /* height: 100vh;
-  overflow-y: auto; */
+  /* height: 300vh; */
+  /* transition: 0.5s ease; */
+  /* border: 4px solid black; */
 }

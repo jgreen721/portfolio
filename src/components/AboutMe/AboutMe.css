@@ -1,5 +1,5 @@
 .about-me-section {
-  color: white;
+  color: var(--mainColor);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,6 +8,7 @@
   /* border: 2px solid red; */
   position: relative;
   padding: 2rem;
+  /* background: orange; */
   /* font-family:""; */
 }
 
@@ -31,8 +32,10 @@
 }
 
 .reversed {
-  background: white;
-  color: black;
+  /* background:black;
+  color:white; */
+  background: var(--mainBg1);
+  color: var(--mainColor);
 }
 
 @keyframes dropcover {

@@ -23,7 +23,7 @@
 }
 
 .shiny-success {
-  text-shadow: 2px 2px 5px white;
+  text-shadow: 2px 2px 5px var(--mainColor);
   /* color: red; */
 }
 

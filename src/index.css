@@ -12,6 +12,20 @@ html {
   --mozillaText: "Mozilla Text", sans-serif;
   --outfitText: "Outfit", sans-serif;
   --mainPaddingX: 12.5rem;
+  --black1: rgb(35, 35, 35);
+  --black2: rgb(100, 100, 100);
+  --middleblack: rgb(
+    75,
+    75,
+    75
+  ); /*used for quotes to achieve 'transparent look' */
+  --white1: rgb(235, 235, 235);
+  --white2: rgb(200, 200, 200);
+  --middlewhite: rgb(
+    210,
+    210,
+    210
+  ); /*used for quotes to achieve 'transparent look' */
 }
 
 li {

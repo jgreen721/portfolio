@@ -1,5 +1,5 @@
 import {useState} from "react"
-import {Hero,AboutMe} from "./components"
+import {Hero,FixedMenu,AboutMe} from "./components"
 import './App.css'
 
 function App() {
@@ -17,11 +17,16 @@ function App() {
     setCircleSize(`${temp}%`)
   }
 
+  const handleThemeChange=()=>{
+    setTheme((theme)=>theme == "light" ? "dark" : "light");
+  }
+
 
 
   return (
-    <div data-them={theme} className="app">
+    <div data-theme={theme} className="app">
       <div className="app-content">
+        <FixedMenu handleThemeChange={handleThemeChange} theme={theme}/>
           <Hero circleSize={circleSize}/>
           <AboutMe/>
       </div>
