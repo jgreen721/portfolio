@@ -35,6 +35,14 @@
   border-radius: 2rem;
   position: relative;
   transition: 0.25s ease;
+  background: var(--secondaryColor);
+  outline: none;
+  border: none;
+  transition: 0.25s ease;
+}
+
+.theme-btn:hover {
+  box-shadow: 0px 0px 2px black, 1px 2px 5px black inset;
 }
 
 .button-content {
@@ -138,7 +146,28 @@
 
 .moon {
   height: 30px;
-  height: 30px;
+  width: 30px;
   border-radius: 50%;
-  background: white;
+  border: 1px solid black;
+  background: var(--mainColor);
+  position: relative;
+  transform: scale(0);
+  animation: scalemoon 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes scalemoon {
+  100% {
+    transform: scale(1);
+  }
+}
+
+.moon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 30px;
+  left: 12px;
+  top: -3px;
+  border-radius: 50%;
+  background: var(--secondaryColor);
 }
