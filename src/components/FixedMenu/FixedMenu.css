@@ -56,12 +56,10 @@
 .sun-icon {
   height: 30px;
   width: 30px;
-  /* border: 1px solid black; */
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* transition: 0.25s ease; */
   animation: animatesun 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
@@ -78,32 +76,28 @@
   width: 50%;
   height: 50%;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid var(--mainColor);
 }
 
 .rays-container {
   position: absolute;
   inset: 0;
-  /* border: 2px solid red; */
 }
 
 .ray {
   position: absolute;
   inset: 0;
   transform: scaleY(0);
-  /* border: 2px solid yellow; */
 }
 
 .ray::after {
   content: "";
-  /* height: 0%; */
   height: 20%;
   width: 1px;
-  background: black;
+  background: var(--mainColor);
   position: absolute;
   left: 50%;
   transform: translateX(-1px);
-  /* animation: growray 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; */
 }
 
 @keyframes growray {

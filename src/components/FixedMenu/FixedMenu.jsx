@@ -7,7 +7,7 @@ const FixedMenu = ({handleThemeChange,theme}) => {
         <h3>JGDev</h3>
         <button className="theme-btn" onClick={handleThemeChange}>
             <div className="button-content">
-                {theme == "light" 
+                {theme == "dark" 
                 ?
                 <div className="sun-icon">
                     <div className="rays-container">

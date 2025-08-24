@@ -4,19 +4,24 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  height: 75vh;
+  /* height: 75vh; */
   /* border: 2px solid red; */
   position: relative;
   padding: 2rem;
-  /* background: orange; */
-  /* font-family:""; */
+  height: 500vh;
 }
 
 .about-me-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
+}
+
+.reversed {
+  background: var(--mainBg1);
+  color: var(--mainColor);
+  border-radius: 0.25rem;
 }
 
 .about-me-cover {
@@ -31,27 +36,69 @@
     forwards;
 }
 
-.reversed {
-  /* background:black;
-  color:white; */
-  background: var(--mainBg1);
-  color: var(--mainColor);
-}
-
 @keyframes dropcover {
   100% {
     transform: scaleY(0);
   }
 }
 
+.about-me-content-container {
+  width: 100%;
+}
 .about-me-content {
   padding: 3rem 0;
+  width: 100%;
+  /* border: 2px solid orange; */
+}
+
+.laptop-and-coffee {
+  /* border: 2px solid orange; */
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.coffee-mug-parent {
+  border: 5px solid orange;
+  height: 250px;
+  position: relative;
+}
+
+.coffee-mug {
+  height: 150px;
+  width: 150px;
+  background: var(--mainColor);
+  position: relative;
+}
+
+.coffee-mug-top {
+  width: 100%;
+  height: 80px;
+  background: var(--mainColor);
+  position: relative;
+  left: 0;
+  top: 40px;
+  border-radius: 50%;
+  border: 2px solid red;
+  z-index: 5;
+}
+
+.coffee-mug-bottom {
+  width: 100%;
+  height: 80px;
+  background: var(--mainColor);
+  position: relative;
+  left: 0;
+  bottom: 40px;
+  border-radius: 50%;
 }
 
 .laptop {
   height: 450px;
   width: 350px;
-  /* border: 2px solid white; */
 }
 
 .laptop-top {
@@ -116,15 +163,48 @@
 }
 
 .laptop-keyboard {
-  height: 55%;
+  /* height: 55%; */
   width: 100%;
-  background: yellow;
+  background: rgb(185, 185, 185);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.keyboard-row {
+  height: 25%;
+  height: 25px;
+  width: 100%;
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.key {
+  flex: 1;
+  height: 100%;
+  background: black;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.top-keyboard-row .key:first-child,
+.top-keyboard-row .key:last-child,
+.middle-bottom-keyboard-row .key:first-child,
+.middle-bottom-keyboard-row .key:last-child {
+  flex: 2;
+}
+
+.bottom-keyboard-row {
+  margin-bottom: 0;
 }
 
 .laptop-mouse-pad {
-  width: 50%;
-  height: 35%;
-  background: yellow;
+  width: 45%;
+  height: 30%;
+  border-radius: 0.25rem;
+  background: rgb(185, 185, 185);
 }
 
 .laptop-bottom-edge {
