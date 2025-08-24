@@ -38,7 +38,15 @@ const AboutMe = () => {
                          <div className="mug-interior"></div>
                          <div className="coffee"></div>
                      </div>
-                    <div className="coffee-mug"></div>
+                    <div className="coffee-mug">
+                        <div className="coffee-mug-text">
+                        <p className="bold-code-text">{`While (alive){`}</p>
+                        <p className="code-text">code()</p>
+                        <p className="code-text">climb()</p>
+                        <p className="code-text">sleep()</p>
+                        <p className="close-bracket bold-code-text">{`}`}</p>
+                        </div>
+                    </div>
                     <div className="coffee-mug-bottom"></div> 
                     <div className="coffee-handle"></div>
                  </div> 

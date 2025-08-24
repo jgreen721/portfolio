@@ -6,7 +6,6 @@
   flex-direction: column;
   position: relative;
   padding: 5rem var(--mainPaddingX);
-  height: 500vh;
 }
 
 .about-me-header {
@@ -73,6 +72,35 @@
   background: var(--mainBg2);
   position: relative;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coffee-mug-text{
+  position:relative;
+  z-index:5;
+  margin-top:5rem;
+}
+
+.coffee-mug-text p {
+  font-size: 1.4rem;
+}
+
+.code-text {
+  margin-left: 2rem;
+  z-index: 10;
+  position: relative;
+  margin
+}
+
+.close-bracket{
+  position:relative;
+  float:right;
+}
+
+.bold-code-text{
+  font-weight:600;
 }
 
 .coffee-mug-top {
@@ -110,6 +138,15 @@
   position: absolute;
   top: 20%;
   left: 10px;
+  transform: scale(0);
+  animation: scalecoffee 1s forwards;
+  transform-origin: bottom;
+}
+
+@keyframes scalecoffee {
+  100% {
+    transform: scale(1);
+  }
 }
 
 .coffee-mug-bottom {
