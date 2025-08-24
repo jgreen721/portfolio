@@ -4,10 +4,8 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  /* height: 75vh; */
-  /* border: 2px solid red; */
   position: relative;
-  padding: 2rem;
+  padding: 5rem var(--mainPaddingX);
   height: 500vh;
 }
 
@@ -19,8 +17,8 @@
 }
 
 .reversed {
-  background: var(--mainBg1);
-  color: var(--mainColor);
+  background: var(--mainColor);
+  color: var(--mainBg1);
   border-radius: 0.25rem;
 }
 
@@ -46,7 +44,7 @@
   width: 100%;
 }
 .about-me-content {
-  padding: 3rem 0;
+  padding: 3rem 0rem;
   width: 100%;
   /* border: 2px solid orange; */
 }
@@ -56,44 +54,88 @@
   width: 100%;
   display: flex;
   /* flex-direction: column; */
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   gap: 3rem;
 }
 
 .coffee-mug-parent {
-  border: 5px solid orange;
-  height: 250px;
+  height: 175px;
   position: relative;
+  width: 200px;
+  /* border: 3px solid orange; */
+  transform: rotateX(-25deg);
 }
 
 .coffee-mug {
-  height: 150px;
-  width: 150px;
-  background: var(--mainColor);
+  height: 100%;
+  width: 75%;
+  background: var(--mainBg2);
   position: relative;
+  z-index: 2;
 }
 
 .coffee-mug-top {
-  width: 100%;
-  height: 80px;
-  background: var(--mainColor);
-  position: relative;
+  width: 75%;
+  height: 120px;
+  height: 70%;
+  background: var(--mainBg2);
+  position: absolute;
   left: 0;
-  top: 40px;
+  top: -55px;
+  top: -32%;
   border-radius: 50%;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   z-index: 5;
 }
 
-.coffee-mug-bottom {
-  width: 100%;
+.mug-interior {
+  background: gray;
+  border-radius: 50%;
+  /* height: 100px; */
+  height: 75%;
+  width: calc(100% - 20px);
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.coffee {
   height: 80px;
-  background: var(--mainColor);
+  height: 65%;
+  width: calc(100% - 20px);
+  /* transform: rotateX(65deg); */
+  border-radius: 50%;
+  background: rgb(90, 48, 14);
+  position: absolute;
+  top: 20%;
+  left: 10px;
+}
+
+.coffee-mug-bottom {
+  width: 150px;
+  width: 75%;
+  height: 60px;
+  height: 35%;
+  background: var(--mainBg2);
   position: relative;
   left: 0;
-  bottom: 40px;
+  bottom: 30px;
+  bottom: 15%;
   border-radius: 50%;
+  box-shadow: 0px 20px 35px black;
+}
+
+.coffee-handle {
+  height: 65%;
+  width: 65px;
+  border-radius: 50%;
+  border: 15px solid var(--mainBg2);
+  position: absolute;
+  top: 30px;
+  top: 20%;
+  right: 10px;
+  right: 5%;
 }
 
 .laptop {
@@ -189,6 +231,10 @@
   cursor: pointer;
 }
 
+.space-bar {
+  flex: 4;
+}
+
 .top-keyboard-row .key:first-child,
 .top-keyboard-row .key:last-child,
 .middle-bottom-keyboard-row .key:first-child,
@@ -214,4 +260,23 @@
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+@media screen and (max-width: 650px) {
+  .laptop {
+    height: 300px;
+    width: 200px;
+  }
+
+  .keyboard-row {
+    height: 20px;
+  }
+  .laptop-bottom-edge {
+    height: 5px;
+  }
+
+  .coffee-mug-parent {
+    height: 120px;
+    width: 145px;
+  }
 }

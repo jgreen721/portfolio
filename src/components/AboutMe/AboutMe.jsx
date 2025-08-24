@@ -33,11 +33,15 @@ const AboutMe = () => {
 
             <div className="about-me-content">
                 <div className="laptop-and-coffee">
-                    <div className="coffee-mug-parent">
-                    <div className="coffee-mug-top"></div>
+                  <div className="coffee-mug-parent">
+                     <div className="coffee-mug-top">
+                         <div className="mug-interior"></div>
+                         <div className="coffee"></div>
+                     </div>
                     <div className="coffee-mug"></div>
-                    <div className="coffee-mug-bottom"></div>
-                    </div>
+                    <div className="coffee-mug-bottom"></div> 
+                    <div className="coffee-handle"></div>
+                 </div> 
                 <div className="laptop">
                     <div className="laptop-top">
                         <div className="laptop-top-shell"></div>
@@ -85,13 +89,11 @@ const AboutMe = () => {
                                 <div className="key key-1"></div>
                                 <div className="key key-2"></div>
                                 <div className="key key-3"></div>
-                                <div className="key key-4"></div>
+                                <div className="key space-bar"></div>
                                 <div className="key key-5"></div>
                                 <div className="key key-6"></div>
                                 <div className="key key-7"></div>
-                                <div className="key key-8"></div>
-                                <div className="key key-9"></div>
-                                <div className="key key-10"></div>
+
                             </div>
                         </div>
                         <div className="laptop-mouse-pad"></div>
