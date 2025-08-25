@@ -20,7 +20,7 @@
 }
 
 .unfold-laptop {
-  animation: unroll-laptop 2s 1s linear forwards;
+  animation: unroll-laptop 1.5s 1s linear forwards;
 }
 
 .laptop-top-shell {
@@ -58,10 +58,12 @@
 
 .loader-parent {
   text-align: center;
+  width: 50%;
 }
 
 .progress-bar {
   width: 150px;
+  width: 100%;
   height: 8px;
   border-radius: 2rem;
   overflow: hidden;
@@ -75,7 +77,10 @@
   position: absolute;
   height: 100%;
   width: 0%;
-  animation: startprogress 2s 2s ease-in forwards;
+}
+
+.start-progress {
+  animation: startprogress 2s 2.5s ease-in forwards;
 }
 
 @keyframes startprogress {
