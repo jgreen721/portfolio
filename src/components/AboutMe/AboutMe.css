@@ -56,6 +56,7 @@
   align-items: flex-end;
   justify-content: center;
   gap: 3rem;
+  position:relative;
 }
 
 .coffee-mug-parent {
@@ -299,6 +300,45 @@
   left: 0;
 }
 
+.steam{
+  position:absolute;
+  width:15%;
+  height:30%;
+  left:15%;
+  background:black;
+  border-radius:15%;
+  /* filter:blur(30px); */
+  opacity:1;
+  top:0;
+  animation:floatsteam 3s var(--delay) linear infinite;
+}
+
+.steam-cloud-2{
+  left:45%;
+  top:15px;
+}
+
+.steam-cloud-3{
+  left:65%;
+  top:20px;
+}
+
+
+
+@keyframes floatsteam{
+  0%{
+    filter:blur(30px);
+    opacity:.5;
+    transform:scale(.25);
+  }
+
+  100%{
+    transform:translateY(-135px)scale(1);
+    filter:blur(25px);
+    opacity:1;
+  }
+}
+
 @media screen and (max-width: 650px) {
   .laptop {
     height: 300px;
@@ -315,5 +355,9 @@
   .coffee-mug-parent {
     height: 120px;
     width: 145px;
+  }
+
+  .coffee-mug-text p {
+    font-size: 1.1rem;
   }
 }

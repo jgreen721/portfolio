@@ -26,6 +26,13 @@ html {
     210,
     210
   ); /*used for quotes to achieve 'transparent look' */
+
+  /* --black1: rgb(238, 255, 0);
+  --black2: rgb(114, 245, 205);
+  --middleblack: green; 
+  --white1: purple;
+  --white2: violet;
+  --middlewhite: pink; */
 }
 
 li {

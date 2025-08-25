@@ -34,11 +34,19 @@ const AboutMe = () => {
             <div className="about-me-content">
                 <div className="laptop-and-coffee">
                   <div className="coffee-mug-parent">
+                      {/* <div className="steam steam-cloud-2"></div>
+                      <div className="steam steam-cloud-3"></div>
+                      <div className="steam steam-cloud-4"></div> */}
                      <div className="coffee-mug-top">
+                     <div style={{"--delay":"0s"}} className="steam steam-cloud-1"></div>
+                    <div style={{"--delay":".5s"}} className="steam steam-cloud-2"></div>
+                    <div style={{"--delay":"1.15s"}} className="steam steam-cloud-3"></div>
                          <div className="mug-interior"></div>
                          <div className="coffee"></div>
                      </div>
                     <div className="coffee-mug">
+               
+
                         <div className="coffee-mug-text">
                         <p className="bold-code-text">{`While (alive){`}</p>
                         <p className="code-text">code()</p>
