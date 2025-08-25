@@ -32,6 +32,7 @@ const AboutMe = () => {
                 <h1 className="reversed">Me</h1>
             </header>
             <div className="about-me-content">
+                <h1></h1>
                 <div className="laptop-and-coffee">
                     <CoffeeMug/>
                     <Laptop/>
