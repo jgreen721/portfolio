@@ -1,4 +1,5 @@
 import React,{useEffect} from 'react'
+import { CoffeeMug,Laptop } from './components';
 import { useInView } from "react-intersection-observer";
 
 import "./AboutMe.css"
@@ -30,93 +31,11 @@ const AboutMe = () => {
                 <h1>About</h1>
                 <h1 className="reversed">Me</h1>
             </header>
-
             <div className="about-me-content">
                 <div className="laptop-and-coffee">
-                  <div className="coffee-mug-parent">
-                      {/* <div className="steam steam-cloud-2"></div>
-                      <div className="steam steam-cloud-3"></div>
-                      <div className="steam steam-cloud-4"></div> */}
-                     <div className="coffee-mug-top">
-                     <div style={{"--delay":"0s"}} className="steam steam-cloud-1"></div>
-                    <div style={{"--delay":".5s"}} className="steam steam-cloud-2"></div>
-                    <div style={{"--delay":"1.15s"}} className="steam steam-cloud-3"></div>
-                         <div className="mug-interior"></div>
-                         <div className="coffee"></div>
-                     </div>
-                    <div className="coffee-mug">
-               
-
-                        <div className="coffee-mug-text">
-                        <p className="bold-code-text">{`While (alive){`}</p>
-                        <p className="code-text">code()</p>
-                        <p className="code-text">climb()</p>
-                        <p className="code-text">sleep()</p>
-                        <p className="close-bracket bold-code-text">{`}`}</p>
-                        </div>
-                    </div>
-                    <div className="coffee-mug-bottom"></div> 
-                    <div className="coffee-handle"></div>
-                 </div> 
-                <div className="laptop">
-                    <div className="laptop-top">
-                        <div className="laptop-top-shell"></div>
-                        <div className="laptop-monitor"></div>
-                    </div>
-                    <div className="laptop-bottom">
-                        <div className="laptop-keyboard">
-                            <div className="keyboard-row top-keyboard-row">
-                                <div className="key key-1"></div>
-                                <div className="key key-2"></div>
-                                <div className="key key-3"></div>
-                                <div className="key key-4"></div>
-                                <div className="key key-5"></div>
-                                <div className="key key-6"></div>
-                                <div className="key key-7"></div>
-                                <div className="key key-8"></div>
-                                <div className="key key-9"></div>
-                                <div className="key key-10"></div>
-                            </div>
-                            <div className="keyboard-row middle-keyboard-row">
-                                <div className="key key-1"></div>
-                                <div className="key key-2"></div>
-                                <div className="key key-3"></div>
-                                <div className="key key-4"></div>
-                                <div className="key key-5"></div>
-                                <div className="key key-6"></div>
-                                <div className="key key-7"></div>
-                                <div className="key key-8"></div>
-                                <div className="key key-9"></div>
-                                <div className="key key-10"></div>
-                            </div>
-                            <div className="keyboard-row middle-bottom-keyboard-row">
-                                <div className="key key-1"></div>
-                                <div className="key key-2"></div>
-                                <div className="key key-3"></div>
-                                <div className="key key-4"></div>
-                                <div className="key key-5"></div>
-                                <div className="key key-6"></div>
-                                <div className="key key-7"></div>
-                                <div className="key key-8"></div>
-                                <div className="key key-9"></div>
-                                <div className="key key-10"></div>
-                            </div>
-                            <div className="keyboard-row bottom-keyboard-row">
-                                <div className="key key-1"></div>
-                                <div className="key key-2"></div>
-                                <div className="key key-3"></div>
-                                <div className="key space-bar"></div>
-                                <div className="key key-5"></div>
-                                <div className="key key-6"></div>
-                                <div className="key key-7"></div>
-
-                            </div>
-                        </div>
-                        <div className="laptop-mouse-pad"></div>
-                        <div className="laptop-bottom-edge"></div>
-                    </div>
+                    <CoffeeMug/>
+                    <Laptop/>
                 </div>
-            </div>
             </div>
         </div>
     </div>

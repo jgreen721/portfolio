@@ -6,6 +6,24 @@
   flex-direction: column;
   position: relative;
   padding: 5rem var(--mainPaddingX);
+  overflow: hidden;
+}
+
+.about-me-section::after {
+  content: "";
+  width: 85%;
+  height: 120%;
+  background: var(--middleBg);
+  position: absolute;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 15%;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 5rem;
+  right: -15%;
+  top: 0;
+  transform: rotate(-15deg);
+  opacity: 25%;
+  filter: blur(15px);
 }
 
 .about-me-header {
@@ -13,6 +31,9 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  z-index: 1;
+  position: relative;
+  text-shadow: 1px 1px 2px var(--secondaryColor);
 }
 
 .reversed {
@@ -23,9 +44,10 @@
 
 .about-me-cover {
   position: absolute;
-  background: lightgray;
+  background: var(--mainBg1);
   inset: 0;
   transform-origin: bottom;
+  z-index: 10;
 }
 
 .drop-cover {
@@ -49,315 +71,11 @@
 }
 
 .laptop-and-coffee {
-  /* border: 2px solid orange; */
   width: 100%;
   display: flex;
-  /* flex-direction: column; */
   align-items: flex-end;
   justify-content: center;
   gap: 3rem;
-  position:relative;
-}
-
-.coffee-mug-parent {
-  height: 175px;
   position: relative;
-  width: 200px;
-  /* border: 3px solid orange; */
-  transform: rotateX(-25deg);
-}
-
-.coffee-mug {
-  height: 100%;
-  width: 75%;
-  background: var(--mainBg2);
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.coffee-mug-text{
-  position:relative;
-  z-index:5;
-  margin-top:5rem;
-}
-
-.coffee-mug-text p {
-  font-size: 1.4rem;
-}
-
-.code-text {
-  margin-left: 2rem;
-  z-index: 10;
-  position: relative;
-  margin
-}
-
-.close-bracket{
-  position:relative;
-  float:right;
-}
-
-.bold-code-text{
-  font-weight:600;
-}
-
-.coffee-mug-top {
-  width: 75%;
-  height: 120px;
-  height: 70%;
-  background: var(--mainBg2);
-  position: absolute;
-  left: 0;
-  top: -55px;
-  top: -32%;
-  border-radius: 50%;
-  /* border: 2px solid red; */
-  z-index: 5;
-}
-
-.mug-interior {
-  background: gray;
-  border-radius: 50%;
-  /* height: 100px; */
-  height: 75%;
-  width: calc(100% - 20px);
-  position: absolute;
-  left: 10px;
-  top: 10px;
-}
-
-.coffee {
-  height: 80px;
-  height: 65%;
-  width: calc(100% - 20px);
-  /* transform: rotateX(65deg); */
-  border-radius: 50%;
-  background: rgb(90, 48, 14);
-  position: absolute;
-  top: 20%;
-  left: 10px;
-  transform: scale(0);
-  animation: scalecoffee 1s forwards;
-  transform-origin: bottom;
-}
-
-@keyframes scalecoffee {
-  100% {
-    transform: scale(1);
-  }
-}
-
-.coffee-mug-bottom {
-  width: 150px;
-  width: 75%;
-  height: 60px;
-  height: 35%;
-  background: var(--mainBg2);
-  position: relative;
-  left: 0;
-  bottom: 30px;
-  bottom: 15%;
-  border-radius: 50%;
-  box-shadow: 0px 20px 35px black;
-}
-
-.coffee-handle {
-  height: 65%;
-  width: 65px;
-  border-radius: 50%;
-  border: 15px solid var(--mainBg2);
-  position: absolute;
-  top: 30px;
-  top: 20%;
-  right: 10px;
-  right: 5%;
-}
-
-.laptop {
-  height: 450px;
-  width: 350px;
-}
-
-.laptop-top {
-  height: 50%;
-  width: 100%;
-  /* border: 2px solid red; */
-  transform: rotateX(180deg);
-  transform-origin: bottom;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backface-visibility: hidden;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  position: relative;
-  z-index: 5;
-}
-
-.unfold-laptop {
-  animation: unroll-laptop 2s 1s linear forwards;
-}
-
-.laptop-top-shell {
-  position: absolute;
-  inset: 0;
-  background: black;
-  transform: rotateX(180deg);
-  /* z-index: 5; */
-}
-
-.laptop-monitor {
-  width: calc(100% - 15px);
-  height: calc(100% - 15px);
-  /* border: 2px solid red; */
-  background: white;
-  box-shadow: 0px 0px 30px white;
-  position: relative;
-  z-index: 2;
-  border-radius: 0.25rem;
-}
-
-@keyframes unroll-laptop {
-  100% {
-    transform: rotateX(0deg);
-  }
-}
-
-.laptop-bottom {
-  height: 50%;
-  width: 100%;
-  /* border: 2px solid red; */
-  background: rgb(245, 245, 245);
-  position: relative;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  overflow: hidden;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.laptop-keyboard {
-  /* height: 55%; */
-  width: 100%;
-  background: rgb(185, 185, 185);
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-}
-
-.keyboard-row {
-  height: 25%;
-  height: 25px;
-  width: 100%;
-  /* border: 2px solid red; */
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.key {
-  flex: 1;
-  height: 100%;
-  background: black;
-  border-radius: 0.5rem;
-  cursor: pointer;
-}
-
-.space-bar {
-  flex: 4;
-}
-
-.top-keyboard-row .key:first-child,
-.top-keyboard-row .key:last-child,
-.middle-bottom-keyboard-row .key:first-child,
-.middle-bottom-keyboard-row .key:last-child {
-  flex: 2;
-}
-
-.bottom-keyboard-row {
-  margin-bottom: 0;
-}
-
-.laptop-mouse-pad {
-  width: 45%;
-  height: 30%;
-  border-radius: 0.25rem;
-  background: rgb(185, 185, 185);
-}
-
-.laptop-bottom-edge {
-  width: 100%;
-  height: 10px;
-  background: rgb(155, 155, 155);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.steam{
-  position:absolute;
-  width:15%;
-  height:30%;
-  left:15%;
-  background:black;
-  border-radius:15%;
-  /* filter:blur(30px); */
-  opacity:1;
-  top:0;
-  animation:floatsteam 3s var(--delay) linear infinite;
-}
-
-.steam-cloud-2{
-  left:45%;
-  top:15px;
-}
-
-.steam-cloud-3{
-  left:65%;
-  top:20px;
-}
-
-
-
-@keyframes floatsteam{
-  0%{
-    filter:blur(30px);
-    opacity:.5;
-    transform:scale(.25);
-  }
-
-  100%{
-    transform:translateY(-135px)scale(1);
-    filter:blur(25px);
-    opacity:1;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .laptop {
-    height: 300px;
-    width: 200px;
-  }
-
-  .keyboard-row {
-    height: 20px;
-  }
-  .laptop-bottom-edge {
-    height: 5px;
-  }
-
-  .coffee-mug-parent {
-    height: 120px;
-    width: 145px;
-  }
-
-  .coffee-mug-text p {
-    font-size: 1.1rem;
-  }
+  z-index: 1;
 }

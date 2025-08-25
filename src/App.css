@@ -24,15 +24,12 @@
 .app {
   --primaryFont: var(--mozillaText);
   --secondaryFont: var(--outfitText);
+  background: linear-gradient(var(--mainBg1), var(--mainBg2));
 }
 
 .app-content {
   max-width: 144rem;
   margin: 0 auto;
   position: relative;
-  background: linear-gradient(var(--mainBg1), var(--mainBg2));
   font-family: var(--primaryFont);
-  /* height: 300vh; */
-  /* transition: 0.5s ease; */
-  /* border: 4px solid black; */
 }
