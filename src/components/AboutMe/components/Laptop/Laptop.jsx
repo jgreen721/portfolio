@@ -7,7 +7,14 @@ const Laptop = () => {
     <div className="laptop-top">
         <div className="laptop-top-shell"></div>
         <div className="laptop-monitor">
-            <div className="monitor-loader"></div>
+            <div className="monitor-loader">
+                <div className="loader-parent">
+                    <h5>Loading...</h5>
+                    <div className="progress-bar">
+                        <div className="progress"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div className="laptop-bottom">

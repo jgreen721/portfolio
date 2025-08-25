@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react'
-import { CoffeeMug,Laptop } from './components';
+import { CoffeeMug,Laptop,WindowScene } from './components';
 import { useInView } from "react-intersection-observer";
 
 import "./AboutMe.css"
@@ -32,7 +32,7 @@ const AboutMe = () => {
                 <h1 className="reversed">Me</h1>
             </header>
             <div className="about-me-content">
-                <h1></h1>
+                {/* <WindowScene/> */}
                 <div className="laptop-and-coffee">
                     <CoffeeMug/>
                     <Laptop/>

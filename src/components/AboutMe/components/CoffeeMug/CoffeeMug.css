@@ -116,6 +116,7 @@
     top: 20%;
     right: 10px;
     right: 5%;
+    box-shadow:3px 0px 10px black inset;
   }
 
 .steam{
@@ -161,14 +162,24 @@
       /* width: 170vmin; */
       height:22.5vmin;
       width:40vmin;
+      min-width:160px;
+      min-height:130px;
     }
 
     .coffee{
-      top:30%;
+      top:25%;
+    }
+
+    .coffee-mug-text{
+      margin-top:3.5rem;
     }
   
     .coffee-mug-text p {
-      font-size: 1rem;
+      font-size: .85rem;
+    }
+
+    .code-text{
+      margin-left:1rem;
     }
   }
   

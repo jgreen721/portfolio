@@ -67,6 +67,13 @@
 .about-me-content {
   padding: 3rem 0rem;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 3rem 0;
+  height: 700px;
+
   /* border: 2px solid orange; */
 }
 
