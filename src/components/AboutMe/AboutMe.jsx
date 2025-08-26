@@ -1,7 +1,6 @@
 import React,{useEffect} from 'react'
-import { CoffeeMug,Laptop,WindowScene } from './components';
+// import { CoffeeMug,Laptop,WindowScene } from './components';
 import { useInView } from "react-intersection-observer";
-
 import "./AboutMe.css"
 
 const AboutMe = () => {
@@ -35,8 +34,8 @@ const AboutMe = () => {
             <div className="about-me-content">
                 {/* <WindowScene/> */}
                 <div className="laptop-and-coffee">
-                    <CoffeeMug/>
-                    <Laptop inView={inView}/>
+                    {/* <CoffeeMug/>
+                    <Laptop inView={inView}/> */}
                 </div>
             </div>
         </div>

@@ -1,0 +1,76 @@
+.laptop-parent {
+  /* padding: 0.5rem; */
+  border: 2px solid red;
+  position: relative;
+  width: clamp(75%, 500px, 100%);
+  margin: 0 auto;
+}
+
+.laptop {
+  height: 750px;
+  width: 100%;
+  border: 2px solid black;
+  position: relative;
+}
+
+.laptop-top {
+  height: 50%;
+  width: 100%;
+  border: 4px solid black;
+  transform-origin: bottom;
+  transform: rotateX(180deg);
+}
+
+.open-laptop {
+  animation: openlaptop 1s ease-out forwards;
+}
+
+@keyframes openlaptop {
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.laptop-bottom {
+  height: 50%;
+  width: 100%;
+  border: 2px solid blue;
+  padding: 1rem;
+}
+
+.keyboard-container {
+  width: 100%;
+  height: 60%;
+  border: 2px solid orange;
+}
+
+.top-keyboard-row {
+  /* border: 2px solid red; */
+  width: 100%;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.top-row-keyboard-btn {
+  flex: 1;
+}
+
+.keyboard-btn {
+  padding: 1rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+.invisible-btn {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1050px) {
+  .keyboard-btn p {
+    font-size: 1rem;
+  }
+}

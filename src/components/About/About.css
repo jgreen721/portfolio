@@ -1,0 +1,15 @@
+.scene-container {
+  position: relative;
+}
+
+.scene-content-container {
+  padding: 5rem var(--mainPaddingX);
+  border: 2px solid red;
+  position: relative;
+}
+
+@media screen and (max-width: 650px) {
+  .scene-content-container {
+    padding: 5rem 0.5rem;
+  }
+}

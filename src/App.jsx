@@ -1,5 +1,5 @@
 import {useState} from "react"
-import {Hero,FixedMenu,AboutMe} from "./components"
+import {Hero,FixedMenu,About} from "./components"
 import './App.css'
 
 function App() {
@@ -28,7 +28,8 @@ function App() {
       <div className="app-content">
         <FixedMenu handleThemeChange={handleThemeChange} theme={theme}/>
           <Hero circleSize={circleSize}/>
-          <AboutMe/>
+          <About/>
+          {/* <AboutMe/> */}
       </div>
     </div>
   )
