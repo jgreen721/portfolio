@@ -4,7 +4,7 @@ import "./FixedMenu.css"
 const FixedMenu = ({handleThemeChange,theme}) => {
   return (
     <div className="fixed-menu">
-        <h3>JGDev</h3>
+        <h3 className="fixed-menu-logo">JGDev</h3>
         <button className="theme-btn" onClick={handleThemeChange}>
             <div className="button-content">
                 {theme == "dark" 

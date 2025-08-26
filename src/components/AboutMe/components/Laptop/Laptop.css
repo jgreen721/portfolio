@@ -164,12 +164,8 @@
 }
 
 @media screen and (max-width: 650px) {
-  .coffee-mug-parent {
-    height: 120px;
-    width: 145px;
-  }
-
-  .coffee-mug-text p {
-    font-size: 1.1rem;
+  .laptop {
+    min-width: 205px;
+    min-height: 265px;
   }
 }

@@ -28,6 +28,11 @@
   z-index: -1;
 }
 
+.fixed-menu-logo {
+  color: var(--mainColor);
+  text-shadow: 2px 2px 4px var(--middleColor);
+}
+
 .theme-btn {
   cursor: pointer;
   width: 55px;

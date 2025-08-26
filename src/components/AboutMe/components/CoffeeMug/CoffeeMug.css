@@ -1,185 +1,150 @@
-
 .coffee-mug-parent {
-    height: 175px;
-    height:22.5vmin;
-    width:28vmin;
-    position: relative;
-    /* width: 200px; */
-    /* border: 3px solid orange; */
-    transform: rotateX(-25deg);
+  height: 175px;
+  width: 200px;
+  position: relative;
+  transform: rotateX(-25deg);
+}
+
+.coffee-mug {
+  height: 100%;
+  width: 75%;
+  background: var(--mainBg2);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.coffee-mug-text-div {
+  position: relative;
+  z-index: 5;
+  margin-bottom: 2.5rem;
+}
+
+.coffee-mug-text p {
+  font-size: 2.4rem;
+  letter-spacing: 0.25rem;
+}
+
+.coffee-mug-top {
+  width: 75%;
+  height: 70%;
+  background: var(--mainBg2);
+  position: absolute;
+  left: 0;
+  top: -32%;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.mug-interior {
+  background: gray;
+  border-radius: 50%;
+  /* height: 100px; */
+  height: 75%;
+  width: calc(100% - 20px);
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.coffee {
+  height: 80px;
+  height: 65%;
+  width: calc(100% - 20px);
+  /* transform: rotateX(65deg); */
+  border-radius: 50%;
+  background: rgb(90, 48, 14);
+  position: absolute;
+  top: 22.5%;
+  left: 10px;
+  transform: scale(0);
+  animation: scalecoffee 1s forwards;
+  transform-origin: bottom;
+}
+
+@keyframes scalecoffee {
+  100% {
+    transform: scale(1);
   }
-  
-  .coffee-mug {
-    height: 100%;
-    width: 75%;
-    background: var(--mainBg2);
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+.coffee-mug-bottom {
+  width: 75%;
+  height: 35%;
+  background: var(--mainBg2);
+  position: relative;
+  left: 0;
+  bottom: 15%;
+  border-radius: 50%;
+  box-shadow: 0px 20px 35px black;
+}
+
+.coffee-handle {
+  height: 65%;
+  width: 65px;
+  border-radius: 50%;
+  border: 15px solid var(--mainBg2);
+  position: absolute;
+  top: 30px;
+  top: 20%;
+  right: 5%;
+  box-shadow: 3px 0px 10px black inset;
+}
+
+.steam {
+  position: absolute;
+  width: 15%;
+  height: 30%;
+  left: 15%;
+  background: black;
+  border-radius: 15%;
+  opacity: 1;
+  top: 0;
+  animation: floatsteam 3s var(--delay) linear infinite;
+}
+
+.steam-cloud-2 {
+  left: 45%;
+  top: 15px;
+}
+
+.steam-cloud-3 {
+  left: 65%;
+  top: 20px;
+}
+
+@keyframes floatsteam {
+  0% {
+    filter: blur(30px);
+    opacity: 0.5;
+    transform: scale(0.25);
   }
-  
-  .coffee-mug-text{
-    position:relative;
-    z-index:5;
-    margin-top:5rem;
+
+  100% {
+    transform: translateY(-135px) scale(1);
+    filter: blur(25px);
+    opacity: 1;
   }
-  
-  .coffee-mug-text p {
-    font-size: 1.4rem;
+}
+
+@media screen and (max-width: 650px) {
+  .coffee-mug-parent {
+    width: 165px;
+    height: 150px;
+    min-width: 165px;
   }
-  
-  .code-text {
-    margin-left: 2rem;
-    z-index: 10;
-    position: relative;
-    margin
-  }
-  
-  .close-bracket{
-    position:relative;
-    float:right;
-  }
-  
-  .bold-code-text{
-    font-weight:600;
-  }
-  
-  .coffee-mug-top {
-    width: 75%;
-    height: 120px;
-    height: 70%;
-    background: var(--mainBg2);
-    position: absolute;
-    left: 0;
-    top: -55px;
-    top: -32%;
-    border-radius: 50%;
-    /* border: 2px solid red; */
-    z-index: 5;
-  }
-  
-  .mug-interior {
-    background: gray;
-    border-radius: 50%;
-    /* height: 100px; */
-    height: 75%;
-    width: calc(100% - 20px);
-    position: absolute;
-    left: 10px;
-    top: 10px;
-  }
-  
+
   .coffee {
-    height: 80px;
-    height: 65%;
-    width: calc(100% - 20px);
-    /* transform: rotateX(65deg); */
-    border-radius: 50%;
-    background: rgb(90, 48, 14);
-    position: absolute;
-    top: 22.5%;
-    left: 10px;
-    transform: scale(0);
-    animation: scalecoffee 1s forwards;
-    transform-origin: bottom;
-  }
-  
-  @keyframes scalecoffee {
-    100% {
-      transform: scale(1);
-    }
-  }
-  
-  .coffee-mug-bottom {
-    width: 150px;
-    width: 75%;
-    height: 60px;
-    height: 35%;
-    background: var(--mainBg2);
-    position: relative;
-    left: 0;
-    bottom: 30px;
-    bottom: 15%;
-    border-radius: 50%;
-    box-shadow: 0px 20px 35px black;
-  }
-  
-  .coffee-handle {
-    height: 65%;
-    width: 65px;
-    border-radius: 50%;
-    border: 15px solid var(--mainBg2);
-    position: absolute;
-    top: 30px;
-    top: 20%;
-    right: 10px;
-    right: 5%;
-    box-shadow:3px 0px 10px black inset;
+    top: 25%;
   }
 
-.steam{
-    position:absolute;
-    width:15%;
-    height:30%;
-    left:15%;
-    background:black;
-    border-radius:15%;
-    opacity:1;
-    top:0;
-    animation:floatsteam 3s var(--delay) linear infinite;
+  .coffee-mug-text {
+    margin-top: 3.5rem;
   }
-  
-  .steam-cloud-2{
-    left:45%;
-    top:15px;
-  }
-  
-  .steam-cloud-3{
-    left:65%;
-    top:20px;
-  }
-  
-  
-  @keyframes floatsteam{
-    0%{
-      filter:blur(30px);
-      opacity:.5;
-      transform:scale(.25);
-    }
-  
-    100%{
-      transform:translateY(-135px)scale(1);
-      filter:blur(25px);
-      opacity:1;
-    }
-  }
-  
-  @media screen and (max-width: 650px) {
-   .coffee-mug-parent {
-      /* height: 120px; */
-      /* width: 170vmin; */
-      height:22.5vmin;
-      width:40vmin;
-      min-width:160px;
-      min-height:130px;
-    }
 
-    .coffee{
-      top:25%;
-    }
-
-    .coffee-mug-text{
-      margin-top:3.5rem;
-    }
-  
-    .coffee-mug-text p {
-      font-size: .85rem;
-    }
-
-    .code-text{
-      margin-left:1rem;
-    }
+  .coffee-mug-text p {
+    font-size: 1.6rem;
   }
-  
+}
