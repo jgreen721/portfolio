@@ -18,3 +18,12 @@ export const notificationsDesktop =
   "/samples/notifications/notifications-desktop.png";
 export const notificationsMobile =
   "/samples/notifications/notificationsmobile.png";
+
+export const samples = [
+  {
+    id: 1,
+    title: "connect-four",
+    img: connectFourDesktop,
+    link: "https://jgreen721dev.com",
+  },
+];

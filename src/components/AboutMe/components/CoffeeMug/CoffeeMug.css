@@ -22,8 +22,8 @@
   margin-bottom: 2.5rem;
 }
 
-.coffee-mug-text p {
-  font-size: 2.4rem;
+.mug-text {
+  font-size: 3rem;
   letter-spacing: 0.25rem;
 }
 
@@ -140,11 +140,7 @@
     top: 25%;
   }
 
-  .coffee-mug-text {
-    margin-top: 3.5rem;
-  }
-
-  .coffee-mug-text p {
+  .mug-text {
     font-size: 1.6rem;
   }
 }

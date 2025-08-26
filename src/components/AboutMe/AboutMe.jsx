@@ -14,7 +14,7 @@ const AboutMe = () => {
         if(inView){
           entry.target.querySelector(".about-me-cover").classList.add("drop-cover");
           entry.target.querySelector(".laptop-top").classList.add("unfold-laptop");
-          entry.target.querySelector(".progress").classList.add("start-progress");
+        //   entry.target.querySelector(".progress").classList.add("start-progress");
           console.log(entry)
           }else{
 
@@ -36,7 +36,7 @@ const AboutMe = () => {
                 {/* <WindowScene/> */}
                 <div className="laptop-and-coffee">
                     <CoffeeMug/>
-                    <Laptop/>
+                    <Laptop inView={inView}/>
                 </div>
             </div>
         </div>

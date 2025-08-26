@@ -1,19 +1,67 @@
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
+import {samples} from "../../../../const"
 import "./Laptop.css"
 
-const Laptop = () => {
+const Laptop = ({inView}) => {
+        const progressRef = useRef();
+        const loaderRef = useRef();
+        const displayRef = useRef();
+
+
+    useEffect(()=>{
+        const handleProgressLoader=async()=>{
+            await sleep(5000);
+            startProgressLoader(0)
+
+        }
+        if(inView){
+        console.log('start the proramming animations!!')
+         handleProgressLoader();
+        }
+    },[inView])
+
+    const startProgressLoader=async(progressVal)=>{
+       
+            progressRef.current.style.width = `${progressVal}%`
+            await sleep(20)
+            console.log(progressVal);
+            if(progressVal < 100)startProgressLoader(++progressVal);
+            else handleLoadMonitorDisplay();
+    }
+
+    const handleLoadMonitorDisplay=async()=>{
+            loaderRef.current.classList.add("hide-loader-display")
+            displayRef.current.classList.add("show-monitor-display");
+    }
+
+    const sleep=async(del)=>{
+        await new Promise((resolve)=>setTimeout(()=>resolve(),del));
+
+    }
   return (
     <div className="laptop">
     <div className="laptop-top">
         <div className="laptop-top-shell"></div>
         <div className="laptop-monitor">
-            <div className="monitor-loader">
+            <div ref={loaderRef} className="monitor-loader">
                 <div className="loader-parent">
                     <h5>Loading...</h5>
                     <div className="progress-bar">
-                        <div className="progress"></div>
+                        <div ref={progressRef} className="progress"></div>
                     </div>
                 </div>
+            </div>
+            <div ref={displayRef} className="monitor-display">
+                <h3>Developer</h3>
+                <h3>Climber</h3>
+                <h5>And thats about it...</h5>
+                <ul className="samples-list">
+                    {samples.map(sample=>(
+                        <li>
+                            <img className="sample-img" src={sample.img} alt="img"/>
+                        </li>
+                    ))}
+                </ul>
             </div>
         </div>
     </div>
