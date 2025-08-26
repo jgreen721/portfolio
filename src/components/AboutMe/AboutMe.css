@@ -86,3 +86,9 @@
   position: relative;
   z-index: 1;
 }
+
+@media screen and (max-width: 650px) {
+  .laptop-and-coffee {
+    gap: 0;
+  }
+}
