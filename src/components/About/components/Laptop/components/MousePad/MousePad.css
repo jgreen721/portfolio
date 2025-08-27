@@ -1,0 +1,5 @@
+.mouse-pad {
+  background: radial-gradient(silver, gray);
+  position: absolute;
+  inset: 0;
+}

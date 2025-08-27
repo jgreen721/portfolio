@@ -4,6 +4,23 @@
   gap: 0.25rem;
   margin-bottom: 0.5rem;
   white-space: nowrap;
+  /* border-radius: 0.85rem; */
+  /* overflow: hidden; */
+}
+
+.keyboard-btn {
+  border-radius: 1rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.15s ease-in;
+  padding: 1rem;
+  box-shadow: 3px -5px 10px rgba(35, 35, 35, 0.65) inset;
+}
+
+.keyboard-btn:hover {
+  box-shadow: 3px -3px 5px black inset;
+  transition: 0.5s ease-out;
 }
 
 .flex-2-btn {
@@ -12,4 +29,11 @@
 
 .space-bar {
   flex: 5;
+}
+
+@media screen and (max-width: 750px) {
+  .keyboard-btn {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+  }
 }

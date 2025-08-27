@@ -1,0 +1,14 @@
+.monitor {
+  height: 500px;
+  width: 100%;
+  /* border: 3px solid green; */
+  background: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 1150px) {
+  .monitor {
+    height: 375px;
+  }
+}

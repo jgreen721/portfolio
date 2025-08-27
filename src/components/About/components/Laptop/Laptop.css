@@ -1,27 +1,33 @@
 .laptop-parent {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   position: relative;
   width: clamp(75%, 500px, 100%);
   margin: 0 auto;
 }
 
 .laptop {
-  height: 750px;
+  /* height: 750px; */
   width: 100%;
-  border: 2px solid black;
+  /* border: 2px solid darkgray; */
+  border-radius: 1rem;
   position: relative;
+  overflow: hidden;
 }
 
 .laptop-top {
   height: 50%;
-  width: 100%;
-  border: 4px solid black;
+  /* width: 100%; */
+  /* border: 4px solid black; */
   transform-origin: bottom;
   transform: rotateX(180deg);
+  position: relative;
+  backface-visibility: hidden;
+  /* border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem; */
 }
 
 .open-laptop {
-  animation: openlaptop 1s ease-out forwards;
+  animation: openlaptop 1s 2s ease-out forwards;
 }
 
 @keyframes openlaptop {
@@ -30,15 +36,54 @@
   }
 }
 
+.laptop-top-back-shell {
+  /* background: black; */
+  background: radial-gradient(rgb(15, 15, 15), rgb(45, 45, 45));
+  position: absolute;
+  inset: 0;
+  transform: rotateX(180deg);
+}
+
+.laptop-top-front {
+  position: relative;
+  background: radial-gradient(rgb(15, 15, 15), rgb(45, 45, 45));
+  inset: 0;
+  padding: 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  /* border: 5px solid orange; */
+}
+
 .laptop-bottom {
   height: 50%;
   width: 100%;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: radial-gradient(rgb(15, 15, 15), rgb(45, 45, 45));
 }
 
 .keyboard-container {
   width: 100%;
   height: 60%;
-  border: 2px solid orange;
+  /* border: 2px solid orange; */
+}
+
+.mouse-container {
+  width: clamp(45%, 500px, 65%);
+  height: 150px;
+  border: 2px solid black;
+  margin: 3rem 0;
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 650px) {
+  .mouse-container {
+    height: 125px;
+  }
 }
