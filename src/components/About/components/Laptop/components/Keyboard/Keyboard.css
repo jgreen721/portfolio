@@ -1,0 +1,15 @@
+.keyboard-row {
+  width: 100%;
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+}
+
+.flex-2-btn {
+  flex: 2;
+}
+
+.space-bar {
+  flex: 5;
+}

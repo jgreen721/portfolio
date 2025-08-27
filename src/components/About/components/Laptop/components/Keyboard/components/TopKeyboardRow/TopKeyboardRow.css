@@ -1,0 +1,24 @@
+.top-row-keyboard-btn {
+  flex: 1;
+  padding: 0.25rem;
+}
+
+.keyboard-btn {
+  padding: 1rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+.invisible-btn {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1050px) {
+  .keyboard-btn p {
+    font-size: 1rem;
+  }
+}
