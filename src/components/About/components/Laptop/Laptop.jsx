@@ -23,7 +23,7 @@ const Laptop = () => {
           <div className="laptop-top-back-shell"></div>
           <div className="laptop-top-front">
             <div className="laptop-monitor">
-              <Monitor/>
+              <Monitor inView={inView}/>
             </div>
           </div>
         </div>
