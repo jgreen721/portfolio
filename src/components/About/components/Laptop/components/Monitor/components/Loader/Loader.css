@@ -3,6 +3,8 @@
   inset: 0;
   /* border: 2px solid red; */
   background: rgb(25, 25, 25);
+  filter: blur(100px);
+  padding: 0.5rem;
 }
 
 .loader-content {
@@ -23,11 +25,10 @@
   align-items: center;
   justify-content: center;
   transition: 0.25s ease;
-  filter: blur(100px);
 }
 
 .clear-loading-blur {
-  animation: clearblur 1s 3s forwards;
+  animation: clearblur 1s 2.5s forwards, hideloader 1s 7.5s forwards;
 }
 
 .loader-text {
@@ -35,6 +36,12 @@
   position: absolute;
   font-weight: 600;
   color: white;
+}
+
+@keyframes hideloader {
+  100% {
+    transform: scale(0);
+  }
 }
 
 .loader-outside-circle {

@@ -10,9 +10,9 @@ const Loader = ({inView}) => {
       }
   },[inView])
   return (
-    <div className="loader-parent">
+    <div ref={loaderRef} className="loader-parent">
         <div className="loader-content">
-            <div ref={loaderRef} className="loader-card">
+            <div className="loader-card">
                 <div className="loader-outside-circle">
                   <div className="loader-inside-circle"></div>
                 </div>

@@ -1,11 +1,12 @@
 import React from 'react'
-import {Loader} from "./components"
+import {Loader,Desktop} from "./components"
 import "./Monitor.css"
 
 const Monitor = ({inView}) => {
   return (
     <div className="monitor">
-      <Loader inView={inView}/>
+      {/* <Loader inView={inView}/> */}
+      <Desktop inView={inView}/>
     </div>
   )
 }
