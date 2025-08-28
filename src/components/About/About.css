@@ -4,7 +4,7 @@
 
 .scene-content-container {
   padding: 5rem var(--mainPaddingX);
-  border: 2px solid red;
+  /* border: 2px solid red; */
   position: relative;
 }
 

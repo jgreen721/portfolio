@@ -45,10 +45,10 @@ const TopKeyboardRow = () => {
     </button>
     {/* <button className="top-row-keyboard-btn invisible-btn"></button> */}
     {/* <button className="top-row-keyboard-btn invisible-btn"></button> */}
-    <button className="top-row-keyboard-btn power-btn">
+    {/* <button className="top-row-keyboard-btn power-btn">
       <div className="power-btn-icon">
       </div>
-    </button>
+    </button> */}
 
 
   </div>

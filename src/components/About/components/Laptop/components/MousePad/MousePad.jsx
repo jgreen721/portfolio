@@ -3,7 +3,7 @@ import "./MousePad.css"
 
 const MousePad = () => {
   return (
-    <div className="mouse-pad">MousePad</div>
+    <div className="mouse-pad"></div>
   )
 }
 
