@@ -5,7 +5,7 @@ import "./Monitor.css"
 const Monitor = ({inView}) => {
   return (
     <div className="monitor">
-      {/* <Loader inView={inView}/> */}
+      <Loader inView={inView}/>
       <Desktop inView={inView}/>
     </div>
   )

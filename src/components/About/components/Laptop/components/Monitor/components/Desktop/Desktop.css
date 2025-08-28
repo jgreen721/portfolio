@@ -1,3 +1,19 @@
+.desktop-container {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.show-desktop {
+  animation: showdesktop 1s 8s forwards;
+}
+
+@keyframes showdesktop {
+  100% {
+    opacity: 1;
+  }
+}
+
 .desktop-menu-row {
   display: flex;
   align-items: center;
@@ -23,4 +39,13 @@
 .flex-row {
   display: flex;
   gap: 1rem;
+}
+
+@media screen and (max-width: 650px) {
+  .menu-list {
+    gap: 0.25rem;
+  }
+  .menu-list p {
+    font-size: 0.85rem;
+  }
 }

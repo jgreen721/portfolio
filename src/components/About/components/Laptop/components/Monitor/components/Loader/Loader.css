@@ -5,6 +5,7 @@
   background: rgb(25, 25, 25);
   filter: blur(100px);
   padding: 0.5rem;
+  z-index: 20;
 }
 
 .loader-content {
