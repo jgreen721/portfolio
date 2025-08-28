@@ -12,3 +12,9 @@
     height: 375px;
   }
 }
+
+@media screen and (max-width: 650px) {
+  .monitor {
+    height: 325px;
+  }
+}

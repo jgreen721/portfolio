@@ -17,6 +17,16 @@
   pointer-events: none;
 }
 
+.power-btn {
+  border-radius: 0.25rem;
+  background: rgb(15, 15, 15);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px -3px 10px rgba(35, 35, 35, 0.85) inset,
+    0px 2px 3px rgb(9, 252, 159, 1);
+}
+
 @media screen and (max-width: 1050px) {
   .keyboard-btn p {
     font-size: 1rem;

@@ -67,9 +67,21 @@ p {
   font-size: 1.8rem;
 }
 
+@media screen and (max-width: 1050px) {
+  :root {
+    --mainPaddingX: 3.5rem;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+}
+
 @media screen and (max-width: 650px) {
   :root {
-    --mainPaddingX: 2.5rem;
+    --mainPaddingX: 2rem;
   }
   h1 {
     font-size: 5rem;

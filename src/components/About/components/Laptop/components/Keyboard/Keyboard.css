@@ -1,25 +1,25 @@
 .keyboard-row {
   width: 100%;
   display: flex;
-  gap: 0.25rem;
+  gap: 0.5rem;
   margin-bottom: 0.5rem;
   white-space: nowrap;
-  /* border-radius: 0.85rem; */
-  /* overflow: hidden; */
 }
 
 .keyboard-btn {
-  border-radius: 1rem;
   outline: none;
   border: none;
   cursor: pointer;
   transition: 0.15s ease-in;
   padding: 1rem;
-  box-shadow: 3px -5px 10px rgba(35, 35, 35, 0.65) inset;
+  border-radius: 0.5rem;
+  box-shadow: 0px -5px 5px rgba(35, 35, 35, 0.65) inset,
+    0px 2px 3px rgb(9, 252, 159, 0.75);
 }
 
 .keyboard-btn:hover {
-  box-shadow: 3px -3px 5px black inset;
+  box-shadow: 0px -3px 10px rgba(35, 35, 35, 0.85) inset,
+    0px 2px 3px rgb(9, 252, 159, 1);
   transition: 0.5s ease-out;
 }
 
@@ -28,12 +28,17 @@
 }
 
 .space-bar {
-  flex: 5;
+  flex: 10;
+  min-width: 150px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
   .keyboard-btn {
     padding: 0.5rem;
     border-radius: 0.25rem;
+  }
+
+  .space-bar {
+    min-width: fit-content;
   }
 }

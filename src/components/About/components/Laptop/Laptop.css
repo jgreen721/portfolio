@@ -22,6 +22,7 @@
   transform: rotateX(180deg);
   position: relative;
   backface-visibility: hidden;
+  z-index: 10;
   /* border-top-left-radius: 1rem;
   border-top-right-radius: 1rem; */
 }
@@ -82,7 +83,7 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1050px) {
   .mouse-container {
     height: 125px;
   }

@@ -44,7 +44,7 @@ const TabKeyboardRow = () => {
       <p>{`}`}</p>
     </button>
   
-    <button className="top-row-keyboard-btn power-btn">
+    <button className="top-row-keyboard-btn keyboard-btn">
         <p>|</p>
     </button>
     </div>

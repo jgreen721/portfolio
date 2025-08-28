@@ -7,19 +7,19 @@ const BottomKeyboardRow = () => {
         <p>Fn</p>
     </button>
     <button className="keyboard-btn top-row-keyboard-btn">
-      <p>Control</p>
+      <p>Ctrl</p>
     </button>
     <button className="keyboard-btn top-row-keyboard-btn">
       <p>Option</p>
     </button>
     <button className="keyboard-btn top-row-keyboard-btn">
-      <p>Command</p>
+      <p>Cmd</p>
     </button>
     <button className="keyboard-btn top-row-keyboard-btn space-bar">
   
     </button>
     <button className="keyboard-btn top-row-keyboard-btn">
-      <p>Command</p>
+      <p>Cmd</p>
     </button>
     <button className="keyboard-btn top-row-keyboard-btn">
       <p>Option</p>
