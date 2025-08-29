@@ -2,6 +2,9 @@
   position: absolute;
   inset: 0;
   opacity: 0;
+  display: flex;
+  flex-direction: column;
+  /* border: 10px solid green; */
 }
 
 .show-desktop {
@@ -51,15 +54,48 @@
 }
 
 .desktop-main-area {
-  height: 100%;
-  width: 100%;
-}
-
-.desktop-wallpaper-div {
-  height: 100%;
+  flex-grow: 1;
   width: 100%;
   background-image: url("../../../../../../../../../public/wallpaperpattern.jpeg");
   object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
+  color: white;
+  position: relative;
+  /* border: 5px solid blue; */
+}
+
+.icons-row {
+  /* border: 3px solid red; */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 1rem 0;
+  padding: 0.25rem;
+}
+
+.icons-row::after {
+  position: absolute;
+  background: white;
+  content: "";
+  inset: 0;
+  opacity: 25%;
+  /* border-top-right-radius: 35%;
+  border-bottom-left-radius: 35%;
+  border-top-left-radius: 5%;
+  border-bottom-right-radius: 5%; */
+  border-radius: 0.5rem;
+}
+
+.desktop-icons {
+  display: flex;
+  position: relative;
+  gap: 1rem;
+  z-index: 50;
+}
+
+.desktop-icon {
+  height: 30px;
+  width: 30px;
 }

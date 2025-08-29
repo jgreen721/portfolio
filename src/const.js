@@ -28,4 +28,18 @@ export const samples = [
   },
 ];
 
-export const desktopImg = "./desktopwallpaper.jpeg";
+export const googleChromeImg = "./desktop-icons/googlechrome.png";
+export const terminalImg = "./desktop-icons/terminalicon.png";
+
+export const desktopIcons = [
+  {
+    id: 1,
+    title: "google chrome",
+    img: googleChromeImg,
+  },
+  {
+    id: 2,
+    title: "terminal",
+    img: terminalImg,
+  },
+];

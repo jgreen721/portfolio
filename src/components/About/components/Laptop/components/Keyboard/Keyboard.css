@@ -17,6 +17,10 @@
     0px 0px 0px rgb(9, 252, 159, 0.75);
 }
 
+.keyboard-btn p {
+  font-size: 1.5rem;
+}
+
 .illuminate-keyboard {
   animation: illuminatekeys 1s 3s forwards;
 }
@@ -51,5 +55,9 @@
 
   .space-bar {
     min-width: fit-content;
+  }
+
+  .keyboard-btn p {
+    font-size: 1.2rem;
   }
 }

@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react'
 import { FaBatteryFull,FaSearch,FaMoon,FaApple } from "react-icons/fa";
-import {desktopImg} from "../../../../../../../../const"
+import {desktopIcons} from "../../../../../../../../const"
 import "./Desktop.css"
 
 const Desktop = ({inView}) => {
@@ -52,8 +52,15 @@ const Desktop = ({inView}) => {
             </ul>
         </div>
         <div className="desktop-main-area">
-            <div className="desktop-wallpaper-div">
-                {/* <img className="desktop-wallpaper-img" src={desktopImg} alt="" /> */}
+            {/* <div className="desktop-wallpaper-div"></div> */}
+            <div className="icons-row">
+                <ul className="desktop-icons">
+                {desktopIcons.map((icon,idx)=>(
+                    <li key={idx} className="desktop-icon-item">
+                        <img className="desktop-icon" src={icon.img} alt="desktop-icon"/>
+                    </li>
+                ))}
+                </ul>
             </div>
         </div>
     </div>
