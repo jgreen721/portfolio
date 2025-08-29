@@ -27,3 +27,5 @@ export const samples = [
     link: "https://jgreen721dev.com",
   },
 ];
+
+export const desktopImg = "./desktopwallpaper.jpeg";

@@ -29,7 +29,7 @@ const Laptop = () => {
         </div>
         <div className="laptop-bottom">
           <div className="keyboard-container">
-            <Keyboard/>
+            <Keyboard inView={inView}/>
           </div>
           <div className="mouse-container">
             <MousePad/>

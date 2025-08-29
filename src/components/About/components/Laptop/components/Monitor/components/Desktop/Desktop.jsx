@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react'
 import { FaBatteryFull,FaSearch,FaMoon,FaApple } from "react-icons/fa";
-
+import {desktopImg} from "../../../../../../../../const"
 import "./Desktop.css"
 
 const Desktop = ({inView}) => {
@@ -50,6 +50,11 @@ const Desktop = ({inView}) => {
                 </li>
             ))}
             </ul>
+        </div>
+        <div className="desktop-main-area">
+            <div className="desktop-wallpaper-div">
+                {/* <img className="desktop-wallpaper-img" src={desktopImg} alt="" /> */}
+            </div>
         </div>
     </div>
   )

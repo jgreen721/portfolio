@@ -49,3 +49,17 @@
     font-size: 0.85rem;
   }
 }
+
+.desktop-main-area {
+  height: 100%;
+  width: 100%;
+}
+
+.desktop-wallpaper-div {
+  height: 100%;
+  width: 100%;
+  background-image: url("../../../../../../../../../public/wallpaperpattern.jpeg");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
