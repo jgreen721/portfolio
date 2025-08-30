@@ -1,0 +1,16 @@
+.browser-window {
+  position: absolute;
+  border: 5px solid orange;
+  inset: 0;
+  transform: scale(0);
+}
+
+.open-browser-tab {
+  animation: openbrowsertab 1s 12s forwards;
+}
+
+@keyframes openbrowsertab {
+  100% {
+    transform: scale(0.95);
+  }
+}

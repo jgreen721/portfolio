@@ -30,16 +30,32 @@ export const samples = [
 
 export const googleChromeImg = "./desktop-icons/googlechrome.png";
 export const terminalImg = "./desktop-icons/terminalicon.png";
+export const vscodeImg = "./desktop-icons/vscode.png";
+export const quicktimeImg = "./desktop-icons/quicktime.png";
 
 export const desktopIcons = [
   {
     id: 1,
     title: "google chrome",
     img: googleChromeImg,
+    className: "google-chrome-icon",
   },
   {
     id: 2,
     title: "terminal",
     img: terminalImg,
+    className: "terminal-icon",
+  },
+  {
+    id: 3,
+    title: "vscode",
+    img: vscodeImg,
+    className: "vscode-icon",
+  },
+  {
+    id: 4,
+    title: "quicktime",
+    img: quicktimeImg,
+    className: "quicktime-icon",
   },
 ];

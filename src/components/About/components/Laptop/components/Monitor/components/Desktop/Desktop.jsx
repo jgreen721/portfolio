@@ -1,6 +1,10 @@
 import React, {useEffect, useRef} from 'react'
+import {BrowserWindow} from "./components"
 import { FaBatteryFull,FaSearch,FaMoon,FaApple } from "react-icons/fa";
 import {desktopIcons} from "../../../../../../../../const"
+import { GoFileDirectoryFill } from "react-icons/go";
+import { FcEmptyTrash,FcFullTrash } from "react-icons/fc";
+
 import "./Desktop.css"
 
 const Desktop = ({inView}) => {
@@ -11,10 +15,14 @@ const Desktop = ({inView}) => {
         {id:3,name:"Edit"},
         {id:4,name:"View"},
         {id:5,name:"History"},
-        // {id:6,name:"Bookmarks"},
-        {id:7,name:"Profile"},
-        // {id:6,name:"Tab"},
-        {id:8,name:"Help"},
+        {id:6,name:"Profile"},
+        {id:7,name:"Help"},
+    ]
+
+    const directories = [
+        {id:1,name:"Documents"},
+        {id:2,name:"Apps"},
+        {id:3,name:"Reddit"},
     ]
 
     const menuItems =[
@@ -26,6 +34,8 @@ const Desktop = ({inView}) => {
     useEffect(()=>{
         if(inView){
             desktopRef.current.classList.add("show-desktop")
+            desktopRef.current.querySelector(".google-chrome-icon").classList.add("bounce-icon")
+            console.log(desktopRef.current)
         }
     },[inView])
   return (
@@ -53,11 +63,21 @@ const Desktop = ({inView}) => {
         </div>
         <div className="desktop-main-area">
             {/* <div className="desktop-wallpaper-div"></div> */}
+            <div className="directories-column">
+                {directories.map((directory,idx)=>(
+                <div key={idx} className="directory-item">
+                    <GoFileDirectoryFill/>
+                   <p> {directory.name}</p>
+                </div>
+                ))}
+   
+            </div>
             <div className="icons-row">
                 <ul className="desktop-icons">
                 {desktopIcons.map((icon,idx)=>(
-                    <li key={idx} className="desktop-icon-item">
-                        <img className="desktop-icon" src={icon.img} alt="desktop-icon"/>
+                    <li key={idx} className={`desktop-icon-item`}>
+                        <img className={`desktop-icon ${icon.className}`} src={icon.img} alt="desktop-icon"/>
+                        {icon.title == "google chrome" && <BrowserWindow inView={inView}/>}
                     </li>
                 ))}
                 </ul>

@@ -65,37 +65,75 @@
   /* border: 5px solid blue; */
 }
 
-.icons-row {
-  /* border: 3px solid red; */
+.directories-column {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 1rem 0;
-  padding: 0.25rem;
+  right: 0;
+  padding: 2rem;
 }
 
-.icons-row::after {
+.directory-item {
+  margin: 1.5rem 0;
+  font-size: 4rem;
+  color: rgb(67, 67, 245);
+}
+
+.directory-item p {
+  font-size: 1rem;
+  line-height: 0rem;
+  color: white;
+}
+
+.icons-row {
+  position: absolute;
+  inset: 0;
+  /* border: 2px solid green; */
+  padding: 0.25rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* .icons-row::after {
   position: absolute;
   background: white;
   content: "";
   inset: 0;
   opacity: 25%;
-  /* border-top-right-radius: 35%;
-  border-bottom-left-radius: 35%;
-  border-top-left-radius: 5%;
-  border-bottom-right-radius: 5%; */
   border-radius: 0.5rem;
-}
+} */
 
 .desktop-icons {
   display: flex;
-  position: relative;
   gap: 1rem;
-  z-index: 50;
+  /* border: 5px solid blue; */
+}
+
+.desktop-icon-item {
+  /* position: relative; */
+  /* height: 100%;
+  width: 100%; */
+  /* border: 5px solid orange; */
 }
 
 .desktop-icon {
   height: 30px;
   width: 30px;
+}
+
+.bounce-icon {
+  animation: bounceicon 1s 8.5s forwards;
+  animation-iteration-count: 5;
+}
+
+@keyframes bounceicon {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
