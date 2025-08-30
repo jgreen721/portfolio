@@ -1,6 +1,6 @@
 .browser-window {
   position: absolute;
-  border: 5px solid orange;
+  /* border: 5px solid orange; */
   inset: 0;
   transform: scale(0);
 }
@@ -9,8 +9,67 @@
   animation: openbrowsertab 1s 12s forwards;
 }
 
+.browser-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.top-browser-bar {
+  padding: 0.5rem;
+  background: navy;
+  height: 25px;
+}
+
+.browser-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.browser-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.red-dot {
+  background: red;
+}
+
+.yellow-dot {
+  background: yellow;
+}
+
+.green-dot {
+  background: green;
+}
+
 @keyframes openbrowsertab {
   100% {
     transform: scale(0.95);
   }
+}
+
+.browser-view-page {
+  background: blue;
+  flex-grow: 1;
+  position: relative;
+}
+
+.browser-tab {
+  background: blue;
+  position: absolute;
+  top: -24px;
+  left: 65px;
+  height: 25px;
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.browser-tab p {
+  font-size: 0.85rem;
 }

@@ -10,7 +10,29 @@ const BrowserWindow = ({inView}) => {
     }
   },[inView])
   return (
-    <div ref={browserRef} className="browser-window">BrowserWindow</div>
+    <div ref={browserRef} className="browser-window">
+      <div className="browser-container">
+        <div className="top-browser-bar">
+          <div className="browser-dots">
+            <div className="browser-dot-div">
+              <div className="browser-dot red-dot"></div>
+            </div>
+            <div className="browser-dot-div">
+              <div className="browser-dot yellow-dot"></div>
+            </div>
+            <div className="browser-dot-div">
+              <div className="browser-dot green-dot"></div>
+            </div>
+          </div>
+        </div>
+        <div className="browser-view-page">
+          <div className="browser-tab">
+            <p>google- Google Search</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
   )
 }
 
