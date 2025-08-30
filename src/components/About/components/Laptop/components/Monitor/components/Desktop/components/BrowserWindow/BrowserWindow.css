@@ -3,6 +3,9 @@
   /* border: 5px solid orange; */
   inset: 0;
   transform: scale(0);
+  color: var(--mainColor);
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
 .open-browser-tab {
@@ -17,7 +20,7 @@
 }
 .top-browser-bar {
   padding: 0.5rem;
-  background: navy;
+  background: var(--secondaryBg2);
   height: 25px;
 }
 
@@ -51,13 +54,14 @@
 }
 
 .browser-view-page {
-  background: blue;
+  background: var(--mainBg1);
   flex-grow: 1;
   position: relative;
+  /* border-radius: 0.5rem; */
 }
 
 .browser-tab {
-  background: blue;
+  background: var(--mainBg1);
   position: absolute;
   top: -24px;
   left: 65px;
