@@ -15,7 +15,7 @@ const Desktop = ({inView}) => {
         {id:3,name:"Edit"},
         {id:4,name:"View"},
         {id:5,name:"History"},
-        {id:6,name:"Profile"},
+        // {id:6,name:"Profile"},
         {id:7,name:"Help"},
     ]
 
@@ -30,6 +30,32 @@ const Desktop = ({inView}) => {
         {id:2,icon:<FaSearch/>},
         {id:3,icon:<FaMoon/>},
     ]
+
+
+    const days = {
+        1:"Mon",
+        2:"Tues",
+        3:"Wed",
+        4:"Thurs",
+        5:"Fri",
+        6:"Sat",
+        7:"Sun"
+    }
+
+    const months = {
+        1:"Jan",
+        2:"Feb",
+        3:"Mar",
+        4:"Apr",
+        5:"May",
+        6:"June",
+        7:"July",
+        8:"Aug",
+        9:"Sept",
+        10:"Oct",
+        11:"Nov",
+        12:"Dec",
+    }
 
     useEffect(()=>{
         if(inView){
@@ -51,6 +77,7 @@ const Desktop = ({inView}) => {
                         <p>{linkItem.name}</p>
                     </li>
                     ))}
+
                 </ul>
             </div>
             <ul className="flex-row">
@@ -59,6 +86,8 @@ const Desktop = ({inView}) => {
                     {menuItem.icon}
                 </li>
             ))}
+            <li>{days[new Date().getDay()]} {months[new Date().getMonth()]} {new Date().getDate()} {`${new Date().getHours()} : ${new Date().getMinutes()}`}</li>
+
             </ul>
         </div>
         <div className="desktop-main-area">

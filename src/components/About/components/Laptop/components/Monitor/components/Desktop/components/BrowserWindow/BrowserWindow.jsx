@@ -9,8 +9,14 @@ const BrowserWindow = ({inView}) => {
       browserRef.current.classList.add("open-browser-tab")
     }
   },[inView])
+
+  const handleMinimizeWindow=()=>{
+    console.log("handle minimizeWindow()")
+    browserRef.current.classList.toggle("open-browser-tab")
+    browserRef.current.classList.toggle("minimize-browser-tab")
+  }
   return (
-    <div ref={browserRef} className="browser-window">
+    <div onClick={handleMinimizeWindow} ref={browserRef} className="browser-window">
       <div className="browser-container">
         <div className="top-browser-bar">
           <div className="browser-dots">

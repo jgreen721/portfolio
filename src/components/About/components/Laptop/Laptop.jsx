@@ -25,6 +25,7 @@ const Laptop = () => {
             <div className="laptop-monitor">
               <Monitor inView={inView}/>
             </div>
+            <h5 className="macbook-air-text">Macbook Air</h5>
           </div>
         </div>
         <div className="laptop-bottom">
