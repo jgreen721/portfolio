@@ -1,0 +1,41 @@
+.top-browser-bar {
+  padding: 0.5rem;
+  background: var(--secondaryBg2);
+  height: 25px;
+}
+
+.browser-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.browser-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.red-dot {
+  background: red;
+}
+
+.yellow-dot {
+  background: yellow;
+}
+
+.green-dot {
+  background: green;
+}
+
+@keyframes openbrowsertab {
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+.browser-view-page {
+  background: var(--mainBg1);
+  flex-grow: 1;
+  position: relative;
+  /* border-radius: 0.5rem; */
+}

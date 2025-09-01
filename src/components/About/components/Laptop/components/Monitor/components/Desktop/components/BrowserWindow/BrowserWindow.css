@@ -12,45 +12,17 @@
   animation: openbrowsertab 1s 12s forwards;
 }
 
+@keyframes openbrowsertab {
+  100% {
+    transform: scale(0.95);
+  }
+}
+
 .browser-container {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
-}
-.top-browser-bar {
-  padding: 0.5rem;
-  background: var(--secondaryBg2);
-  height: 25px;
-}
-
-.browser-dots {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.browser-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-.red-dot {
-  background: red;
-}
-
-.yellow-dot {
-  background: yellow;
-}
-
-.green-dot {
-  background: green;
-}
-
-@keyframes openbrowsertab {
-  100% {
-    transform: scale(0.95);
-  }
 }
 
 .browser-view-page {
@@ -58,6 +30,37 @@
   flex-grow: 1;
   position: relative;
   /* border-radius: 0.5rem; */
+}
+
+.browser-row {
+  display: flex;
+  padding: 1rem;
+}
+
+.browser-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.browser-icon-item {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.browser-search-input {
+  background: var(--mainBg2);
+  color: var(--mainColor);
+  border-radius: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.hamburger-dots {
+  display: flex;
+  align-items: center;
+  font-size: 1.75rem;
+  margin: 0rem 1rem;
 }
 
 .browser-tab {
@@ -76,9 +79,4 @@
 
 .browser-tab p {
   font-size: 0.85rem;
-}
-
-.minimize-browser-tab {
-  transform: scale(0.25);
-  transition: 0.5s ease;
 }

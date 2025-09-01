@@ -63,5 +63,6 @@
     bottom: -3rem;
     font-size: 4.2rem;
     filter: blur(5px);
+    transform: rotateX(110deg) skewX(-15deg) translateX(0.5rem);
   }
 }
