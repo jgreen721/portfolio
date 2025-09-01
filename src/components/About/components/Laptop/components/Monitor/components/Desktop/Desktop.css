@@ -95,26 +95,10 @@
   justify-content: center;
 }
 
-/* .icons-row::after {
-  position: absolute;
-  background: white;
-  content: "";
-  inset: 0;
-  opacity: 25%;
-  border-radius: 0.5rem;
-} */
-
 .desktop-icons {
   display: flex;
   gap: 1rem;
   /* border: 5px solid blue; */
-}
-
-.desktop-icon-item {
-  /* position: relative; */
-  /* height: 100%;
-  width: 100%; */
-  /* border: 5px solid orange; */
 }
 
 .desktop-icon {

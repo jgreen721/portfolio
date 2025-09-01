@@ -24,6 +24,35 @@ export const samples = [
     id: 1,
     title: "connect-four",
     img: connectFourDesktop,
+    mobileImg: connectFourMobile,
+    link: "https://jgreen721dev.com",
+  },
+  {
+    id: 2,
+    title: "character-counting",
+    img: characterCountDesktop,
+    mobileImg: characterCountMobile,
+    link: "https://jgreen721dev.com",
+  },
+  {
+    id: 3,
+    title: "finance-tracker",
+    img: financeTrackerDesktop,
+    mobileImg: financeTrackerMobile,
+    link: "https://jgreen721dev.com",
+  },
+  {
+    id: 4,
+    title: "coding-conf",
+    img: codingConfDesktop,
+    mobileImg: codingConfMobile,
+    link: "https://jgreen721dev.com",
+  },
+  {
+    id: 5,
+    title: "notifications",
+    img: notificationsDesktop,
+    mobileImg: notificationsMobile,
     link: "https://jgreen721dev.com",
   },
 ];
@@ -32,6 +61,7 @@ export const googleChromeImg = "./desktop-icons/googlechrome.png";
 export const terminalImg = "./desktop-icons/terminalicon.png";
 export const vscodeImg = "./desktop-icons/vscode.png";
 export const quicktimeImg = "./desktop-icons/quicktime.png";
+export const avatarImg = "./avatar.png";
 
 export const desktopIcons = [
   {

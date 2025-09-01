@@ -15,7 +15,6 @@ const Desktop = ({inView}) => {
         {id:3,name:"Edit"},
         {id:4,name:"View"},
         {id:5,name:"History"},
-        // {id:6,name:"Profile"},
         {id:7,name:"Help"},
     ]
 
@@ -66,7 +65,6 @@ const Desktop = ({inView}) => {
     },[inView])
 
     const renderTime=()=>{
-        // {days[new Date().getDay()]} {months[new Date().getMonth()]} {new Date().getDate()} {`${new Date().getHours()} : ${new Date().getMinutes()}`}
         let day = days[new Date().getDay()]
         let month = months[new Date().getMonth()]
         let month_day = new Date().getDate();

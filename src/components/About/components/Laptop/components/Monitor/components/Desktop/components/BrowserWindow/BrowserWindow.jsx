@@ -1,17 +1,12 @@
 import React, {useEffect,useRef} from 'react'
+import { TopBrowserBar,BrowserRow } from './components';
 import "./BrowserWindow.css"
-import { TopBrowserBar } from './components';
-import { GoArrowLeft,GoArrowRight } from "react-icons/go";
-import { MdRefresh } from "react-icons/md";
-import { BsThreeDotsVertical } from "react-icons/bs";
+
+
 
 const BrowserWindow = ({inView}) => {
   const browserRef = useRef();
-  const browserIcons = [
-    {id:1,icon:<GoArrowLeft/>},
-    {id:2,icon:<GoArrowRight/>},
-    {id:3,icon:<MdRefresh/>},
-  ]
+
   useEffect(()=>{
     if(inView){
       browserRef.current.classList.add("open-browser-tab")
@@ -26,23 +21,22 @@ const BrowserWindow = ({inView}) => {
           <div className="browser-tab">
             <p>google- Google Search</p>
           </div>
-          <div className="browser-row">
-            <ul className="browser-icons">
-              {browserIcons.map((browserIcon,idx)=>(
-                <li className="browser-icon-item">
-                  {browserIcon.icon}
-                </li>
-              ))}
-            </ul>
-            <div className="browser-search-input">
-              https://hire-a-dev.com/jgreen721
-            </div>
-            <div className="hamburger-dots">
-                <BsThreeDotsVertical/>
-            </div>
-          </div>
+          <BrowserRow/>
+          <div className="browser-page-content">
+                  <header>
+                    <h4>Hire-</h4>
+                    <h4>A-</h4>
+                    <h4>Dev</h4>
+                  </header>
+                <div className="user-info-card">
+                  <div className="user-info-img-div">
+                    <img src="" alt="icon" />
+                  </div>
+                </div>
+                <div className="samples"></div>
+                </div>
         </div>
-
+]
       </div>
     </div>
   )

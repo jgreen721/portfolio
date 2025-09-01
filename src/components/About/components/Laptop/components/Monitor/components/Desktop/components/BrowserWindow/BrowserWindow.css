@@ -29,38 +29,10 @@
   background: var(--mainBg1);
   flex-grow: 1;
   position: relative;
+  /* border: 3px solid green; */
+  display: flex;
+  flex-direction: column;
   /* border-radius: 0.5rem; */
-}
-
-.browser-row {
-  display: flex;
-  padding: 1rem;
-}
-
-.browser-icons {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.browser-icon-item {
-  margin: 0 0.5rem;
-  font-size: 1.5rem;
-}
-
-.browser-search-input {
-  background: var(--mainBg2);
-  color: var(--mainColor);
-  border-radius: 1rem;
-  width: 100%;
-  padding: 1rem;
-}
-
-.hamburger-dots {
-  display: flex;
-  align-items: center;
-  font-size: 1.75rem;
-  margin: 0rem 1rem;
 }
 
 .browser-tab {
@@ -79,4 +51,17 @@
 
 .browser-tab p {
   font-size: 0.85rem;
+}
+
+.browser-page-content {
+  position: relative;
+  /* border: 3px solid red; */
+  flex-grow: 1;
+  background: radial-gradient(var(--mainBg1), var(--mainBg2));
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
