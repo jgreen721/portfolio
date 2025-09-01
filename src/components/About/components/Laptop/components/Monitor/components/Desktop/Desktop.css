@@ -24,8 +24,10 @@
   width: 100%;
   position: relative;
   z-index: 5;
-  color: white;
+  /* color: white; */
   background: black;
+  background: var(--mainBg1);
+  color: var(--mainColor);
   padding: 1rem;
   /* margin: 0rem 1rem; */
 }

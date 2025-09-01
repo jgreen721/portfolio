@@ -62,11 +62,12 @@
   transform: rotateX(90deg);
   filter: blur(10px);
   animation: showshadow 1s 1s forwards;
+  opacity: 0.65;
 }
 
 @keyframes showshadow {
   100% {
-    transform: rotateX(105deg);
+    transform: rotateX(105deg) skewX(-15deg) translateX(1.5rem);
   }
 }
 

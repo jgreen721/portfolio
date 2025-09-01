@@ -2,4 +2,5 @@
   background: radial-gradient(silver, gray);
   position: absolute;
   inset: 0;
+  box-shadow: 5px -5px 15px rgb(25, 25, 25, 0.65) inset;
 }

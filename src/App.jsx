@@ -1,5 +1,5 @@
 import {useState} from "react"
-import {Hero,FixedMenu,About} from "./components"
+import {Hero,FixedMenu,About,Footer} from "./components"
 import './App.css'
 
 function App() {
@@ -29,6 +29,7 @@ function App() {
         <FixedMenu handleThemeChange={handleThemeChange} theme={theme}/>
           <Hero circleSize={circleSize}/>
           <About/>
+          <Footer/>
           {/* <AboutMe/> */}
       </div>
     </div>

@@ -64,6 +64,24 @@ const Desktop = ({inView}) => {
             console.log(desktopRef.current)
         }
     },[inView])
+
+    const renderTime=()=>{
+        // {days[new Date().getDay()]} {months[new Date().getMonth()]} {new Date().getDate()} {`${new Date().getHours()} : ${new Date().getMinutes()}`}
+        let day = days[new Date().getDay()]
+        let month = months[new Date().getMonth()]
+        let month_day = new Date().getDate();
+
+
+        let time_date = new Date();
+let formatter = new Intl.DateTimeFormat("en-US", {
+  hour: "numeric", // or "2-digit" for leading zero
+  minute: "2-digit",
+  hour12: true,
+});
+let formattedTime = formatter.format(time_date);
+        let date = `${day} ${month} ${month_day} ${formattedTime}`
+        return date;
+    }
   return (
     <div ref={desktopRef} className="desktop-container">
         <div className="desktop-menu-row">
@@ -86,7 +104,7 @@ const Desktop = ({inView}) => {
                     {menuItem.icon}
                 </li>
             ))}
-            <li>{days[new Date().getDay()]} {months[new Date().getMonth()]} {new Date().getDate()} {`${new Date().getHours()} : ${new Date().getMinutes()}`}</li>
+            <li>{renderTime()}</li>
 
             </ul>
         </div>

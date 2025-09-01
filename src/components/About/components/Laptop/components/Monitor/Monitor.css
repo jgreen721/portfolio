@@ -12,12 +12,12 @@
 
 @media screen and (max-width: 1150px) {
   .monitor {
-    height: 375px;
+    height: 400px;
   }
 }
 
 @media screen and (max-width: 650px) {
   .monitor {
-    height: 325px;
+    height: 385px;
   }
 }
