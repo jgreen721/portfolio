@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+  width: 100%;
 }
 
 .header-layer-content {
@@ -18,7 +19,8 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
-  padding: 5rem 12rem;
+  padding: 5rem var(--mainPaddingX);
+  /* padding: 5rem 12rem; */
   /* border: 4px solid red; */
 }
 
@@ -32,7 +34,8 @@
   justify-content: space-between;
   width: 100%;
   height: 175px;
-  padding: 0 5rem;
+  padding: 0 2.5rem;
+  /* border: 2px solid red; */
 }
 
 .top-flex-title-div {
@@ -51,6 +54,9 @@
   align-items: flex-start;
   flex-direction: column;
   justify-content: flex-end;
+  /* border: 2px solid red; */
+  padding-right: 2.5rem;
+  overflow: hidden;
 }
 
 .caption-div h3 {
@@ -119,7 +125,7 @@
     padding: 2rem;
   }
   .top-flex-row {
-    padding: 0rem 1rem;
+    padding: 0rem 2.5rem;
   }
   .bottom-flex-row {
     padding: 0rem;

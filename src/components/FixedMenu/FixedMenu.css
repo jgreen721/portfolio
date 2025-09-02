@@ -170,3 +170,36 @@
   border-radius: 50%;
   background: var(--secondaryColor);
 }
+
+@media screen and (max-width: 650px) {
+  .fixed-menu {
+    padding: 2rem var(--mainPaddingX);
+  }
+
+  .theme-btn {
+    width: 55px;
+    height: 40px;
+  }
+
+  .moon {
+    height: 25px;
+    width: 25px;
+  }
+
+  .moon::after {
+    height: 25px;
+    width: 20px;
+    height: 25px;
+    left: 8px;
+  }
+
+  .sun {
+    height: 45%;
+    width: 45%;
+  }
+
+  .ray::after {
+    height: 12.5%;
+    transform: translateX(-1px) translateY(2px);
+  }
+}

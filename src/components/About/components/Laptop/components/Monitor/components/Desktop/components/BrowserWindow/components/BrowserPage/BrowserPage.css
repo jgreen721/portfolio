@@ -3,7 +3,26 @@
   /* border: 3px solid red; */
   flex-grow: 1;
   padding: 1rem;
+  z-index: 5;
+  overflow: hidden;
   background: radial-gradient(var(--mainBg1), var(--mainBg2));
+}
+
+.browser-page-content::after {
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 150%;
+  background: var(--mainBg2);
+  border-radius: 5rem;
+  border-bottom-right-radius: 35%;
+  z-index: -1;
+  top: 2rem;
+  left: -15%;
+  top: -15%;
+  transform: rotate(15deg);
+  filter: blur(5px);
+  opacity: 65%;
 }
 
 header {
@@ -12,15 +31,34 @@ header {
   justify-content: center;
   padding: 0.5rem 0;
   font-weight: 200;
+  gap: 5rem;
 }
 
 header h4 {
   font-weight: 200;
+  font-size: 2rem;
 }
 
 .user-info-flex-1 {
   /* flex: 1; */
   margin: 0 1rem;
+}
+
+.header-icon-div {
+  font-size: 2.5rem;
+  position: relative;
+}
+
+.shadow-header-icon {
+  position: absolute;
+  inset: 0;
+  filter: blur(2px);
+  transform: scale(1.2);
+}
+
+.browserpage-header-text-row {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .avatar-img {

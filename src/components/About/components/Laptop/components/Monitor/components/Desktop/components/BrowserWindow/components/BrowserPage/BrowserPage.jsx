@@ -17,13 +17,18 @@ const BrowserPage = () => {
     <div className="browser-page-content">
     <header>
       <div className="header-icon-div">
-        💻
+        <FaCode/>
+        <FaCode className="shadow-header-icon"/>
       </div>
-      <h4>Hire-</h4>
-      <h4>A-</h4>
-      <h4>Dev</h4>
+      <div className="browserpage-header-text-row">
+        <h4>Hire</h4>
+        <h4>-</h4>
+        <h4>A-</h4>
+        <h4>Dev</h4>
+      </div>
       <div className="header-icon-div">
-        
+        <MdOutlineLaptopMac/>
+        <MdOutlineLaptopMac className="shadow-header-icon"/>
       </div>
     </header>
   <div className="user-info-card">
@@ -64,7 +69,7 @@ const BrowserPage = () => {
     </ul>
   </div> 
   </div>
-</div>
+
   )
 }
 
