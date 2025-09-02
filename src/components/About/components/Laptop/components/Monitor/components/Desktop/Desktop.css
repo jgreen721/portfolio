@@ -111,7 +111,8 @@
     font-size: 0.75rem;
   }
 
-  .desktop-icon {
+  .desktop-icon,
+  .shadow-desktop-icon {
     height: 20px;
     width: 20px;
   }
