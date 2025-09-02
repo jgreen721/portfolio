@@ -11,6 +11,10 @@
   background: radial-gradient(var(--mainBg1), var(--mainBg2));
 }
 
+.browser-page-content::-webkit-scrollbar {
+  display: none;
+}
+
 .browser-page-content::after {
   content: "";
   position: absolute;
@@ -124,4 +128,21 @@ header h4 {
 .sample-img {
   height: 100%;
   width: 100%;
+}
+
+@media screen and (max-width: 650px) {
+  header h4 {
+    font-weight: 200;
+    font-size: 1.4rem;
+  }
+
+  .user-info-flex-1 {
+    /* flex: 1; */
+    margin: 0 1rem;
+  }
+
+  .header-icon-div {
+    font-size: 1.75rem;
+    position: relative;
+  }
 }
