@@ -9,49 +9,48 @@ const BrowserPage = () => {
 
 
     const skills = [
-        {id:1,icon:<FaReact/>},
-        {id:2,icon:<FaHtml5/>},
-        {id:3,icon:<FaCss3/>},
+        {id:1,icon:<FaReact/>, color:"react-blue"},
+        {id:2,icon:<FaHtml5/>, color:"html-orange"},
+        {id:3,icon:<FaCss3/>, color:"css-blue"},
       ]
   return (
     <div className="browser-page-content">
-    <header>
-      <div className="header-icon-div">
-        <FaCode/>
-        <FaCode className="shadow-header-icon"/>
-      </div>
-      <div className="browserpage-header-text-row">
-        <h4>Hire</h4>
-        <h4>-</h4>
-        <h4>A-</h4>
-        <h4>Dev</h4>
-      </div>
-      <div className="header-icon-div">
-        <MdOutlineLaptopMac/>
-        <MdOutlineLaptopMac className="shadow-header-icon"/>
-      </div>
-    </header>
-  <div className="user-info-card">
-    <div className="flex-row">
-      <div className="user-info-flex-1">
-    <div className="user-info-img-div">
-      <img className="avatar-img" src={avatarImg} alt="icon" />
-    </div>
-    </div>
-    <div className="user-info-flex-2">
-    <div className="user-info">
-      <h5>Justin Green</h5>
-      <h5>Los Angeles,CA</h5>
-      <h5>Programmer/Climber</h5>
+        <header>
+            <div className="header-icon-div">
+                <FaCode/>
+                <FaCode className="shadow-header-icon"/>
+            </div>
+            <div className="browserpage-header-text-row">
+                <h4>Hire</h4>
+                <h4>-</h4>
+                <h4>A-</h4>
+                <h4>Dev</h4>
+            </div>
+            <div className="header-icon-div">
+                <MdOutlineLaptopMac/>
+                <MdOutlineLaptopMac className="shadow-header-icon"/>
+            </div>
+        </header>
+        <div className="user-info-card">
+            <div className="flex-row">
+                <div className="user-info-flex-1">
+                    <div className="user-info-img-div">
+                        <img className="avatar-img" src={avatarImg} alt="icon" />
+                    </div>
+                </div>
+            <div className="user-info-flex-2">
+                <div className="user-info">
+                    <h5>Justin Green</h5>
+                    <h5>Los Angeles,CA</h5>
+                    <h5>Programmer/Climber</h5>
       {/* <h5>Passionate full stack developer</h5> */}
-      <div className="skills">
-        {skills.map(skill=>(
-        <li key={skill.id} className="skill-item">
-          {skill.icon}
-        </li>
+                    <div className="skills">
+                        {skills.map(skill=>(
+                        <li key={skill.id} className={`skill-item ${skill.color}`}>
+                            {skill.icon}
+                        </li>
         ))}
-        {/* <FaHtml5/>
-        <FaCss3/> */}
+     
       </div>
     </div>
     </div>
