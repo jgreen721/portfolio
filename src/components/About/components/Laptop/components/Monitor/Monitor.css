@@ -16,8 +16,8 @@
   }
 }
 
-/* @media screen and (max-width: 650px) {
+@media screen and (max-width: 650px) {
   .monitor {
-    height: 385px;
+    height: 325px;
   }
-} */
+}

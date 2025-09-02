@@ -2,11 +2,18 @@ import React, {useEffect,useRef} from 'react'
 import {avatarImg,samples} from "../../../../../../../../../../const"
 import { TopBrowserBar,BrowserRow } from './components';
 import "./BrowserWindow.css"
-
+import {FaReact,FaHtml5,FaCss3} from "react-icons/fa"
 
 
 const BrowserWindow = ({inView}) => {
   const browserRef = useRef();
+
+
+  const skills = [
+    {id:1,icon:<FaReact/>},
+    {id:2,icon:<FaHtml5/>},
+    {id:3,icon:<FaCss3/>},
+  ]
 
   useEffect(()=>{
     if(inView){
@@ -40,11 +47,20 @@ const BrowserWindow = ({inView}) => {
                   <div className="user-info">
                     <h5>Justin Green</h5>
                     <h5>Passionate full stack developer</h5>
+                    <div className="skills">
+                      {skills.map(skill=>(
+                      <li key={skill.id} className="skill-item">
+                        {skill.icon}
+                      </li>
+                      ))}
+                      {/* <FaHtml5/>
+                      <FaCss3/> */}
+                    </div>
                   </div>
                   </div>
                   </div>
                 </div>
-                {/* <div className="samples">
+                 <div className="samples">
                   <ul className="samples-carousel">
                     {samples.map(sample=>(
                       <li className="sample-item">
@@ -54,7 +70,7 @@ const BrowserWindow = ({inView}) => {
                       </li>
                     ))}
                   </ul>
-                </div> */}
+                </div> 
                 </div>
         </div>
 ]
