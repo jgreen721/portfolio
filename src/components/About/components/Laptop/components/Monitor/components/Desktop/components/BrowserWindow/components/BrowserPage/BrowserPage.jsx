@@ -60,12 +60,12 @@ const BrowserPage = () => {
    <div className="samples">
     <ul className="samples-carousel">
       {samples.map(sample=>(
-        <li className="sample-item">
+        <li style={{"--offset":`${sample.id * -1.5}rem`}} className="sample-proj-item">
           <div className="sample-img-div">
             <img className="sample-img" src={sample.img} alt="" />
           </div>
         </li>
-      ))}
+      ))} 
     </ul>
   </div> 
   </div>

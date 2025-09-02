@@ -5,6 +5,9 @@
   padding: 1rem;
   z-index: 5;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
   background: radial-gradient(var(--mainBg1), var(--mainBg2));
 }
 
@@ -84,14 +87,41 @@ header h4 {
   margin: 0.5rem;
 }
 
-.samples-carousel {
+.samples {
+  /* border: 3px solid pink; */
+  flex-grow: 1;
   position: relative;
+  margin: 1rem;
+}
+
+.samples-carousel {
   display: flex;
   width: 100%;
-  border: 2px solid green;
+  /* border: 5px solid green; */
+  position: relative;
+  height: 100%;
+  align-items: center;
+  margin: 0 auto;
+  gap: 0.5rem;
+  /* z-index: 50; */
+}
+
+.sample-proj-item {
+  height: 100%;
+  flex: 1;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0px 0px 4px var(--mainColor);
+  /* border: 3px solid red; */
+
+  /* transform: rotateY(15deg); */
+}
+
+.sample-img-div {
+  height: 100%;
 }
 
 .sample-img {
-  height: 85px;
-  width: 75px;
+  height: 100%;
+  width: 100%;
 }
