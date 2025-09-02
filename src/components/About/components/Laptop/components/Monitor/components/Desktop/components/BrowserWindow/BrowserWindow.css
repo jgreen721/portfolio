@@ -64,4 +64,36 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0.5rem 0;
+}
+
+.user-info-flex-1 {
+  flex: 1;
+}
+
+.user-info-flex-2 {
+  flex: 2;
+}
+
+.avatar-img {
+  height: 85px;
+  width: 85px;
+  border-radius: 2rem;
+}
+
+.user-info h5 {
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+.samples-carousel {
+  position: relative;
+  display: flex;
+  width: 100%;
+  border: 2px solid green;
+}
+
+.sample-img {
+  height: 125px;
+  width: 125px;
 }

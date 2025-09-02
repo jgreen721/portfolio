@@ -1,4 +1,5 @@
 import React, {useEffect,useRef} from 'react'
+import {avatarImg,samples} from "../../../../../../../../../../const"
 import { TopBrowserBar,BrowserRow } from './components';
 import "./BrowserWindow.css"
 
@@ -29,11 +30,31 @@ const BrowserWindow = ({inView}) => {
                     <h4>Dev</h4>
                   </header>
                 <div className="user-info-card">
+                  <div className="flex-row">
+                    <div className="user-info-flex-1">
                   <div className="user-info-img-div">
-                    <img src="" alt="icon" />
+                    <img className="avatar-img" src={avatarImg} alt="icon" />
+                  </div>
+                  </div>
+                  <div className="user-info-flex-2">
+                  <div className="user-info">
+                    <h5>Justin Green</h5>
+                    <h5>Passionate full stack developer</h5>
+                  </div>
+                  </div>
                   </div>
                 </div>
-                <div className="samples"></div>
+                {/* <div className="samples">
+                  <ul className="samples-carousel">
+                    {samples.map(sample=>(
+                      <li className="sample-item">
+                        <div className="sample-img-div">
+                          <img className="sample-img" src={sample.img} alt="" />
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div> */}
                 </div>
         </div>
 ]

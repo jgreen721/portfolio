@@ -1,0 +1,37 @@
+.desktop-menu-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+  /* color: white; */
+  background: black;
+  background: var(--mainBg1);
+  color: var(--mainColor);
+  padding: 1rem;
+  /* margin: 0rem 1rem; */
+}
+
+.menu-list {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.menu-list p {
+  font-size: 1rem;
+}
+
+.flex-row {
+  display: flex;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 650px) {
+  .menu-list {
+    gap: 0.25rem;
+  }
+  .menu-list p {
+    font-size: 0.85rem;
+  }
+}

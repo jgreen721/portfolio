@@ -1,5 +1,5 @@
 .monitor {
-  height: 500px;
+  height: 450px;
   width: 100%;
   /* border: 10px solid green; */
   /* background: white; */
@@ -12,12 +12,12 @@
 
 @media screen and (max-width: 1150px) {
   .monitor {
-    height: 400px;
+    height: 360px;
   }
 }
 
-@media screen and (max-width: 650px) {
+/* @media screen and (max-width: 650px) {
   .monitor {
     height: 385px;
   }
-}
+} */
