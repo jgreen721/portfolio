@@ -20,7 +20,7 @@
 .desktop-main-area {
   flex-grow: 1;
   width: 100%;
-  background-image: url("wallpaperpattern.jpeg");
+  background-image: url("../../../../../../../../../public/wallpaperpattern.jpeg");
   object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
