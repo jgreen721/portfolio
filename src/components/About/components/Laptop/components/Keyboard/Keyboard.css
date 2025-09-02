@@ -26,6 +26,10 @@
   animation: illuminatekeys 1s 3s forwards;
 }
 
+.down-arrow {
+  transform: rotate(180deg) translateY(5px);
+}
+
 @keyframes illuminatekeys {
   100% {
     box-shadow: 0px -5px 5px rgba(35, 35, 35, 0.65) inset,

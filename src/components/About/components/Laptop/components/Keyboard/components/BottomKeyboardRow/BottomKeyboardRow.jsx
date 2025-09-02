@@ -31,7 +31,7 @@ const BottomKeyboardRow = () => {
       <p>^</p>
     </button>
     <button className="keyboard-btn top-row-keyboard-btn">
-      <p>^</p>
+      <p className="down-arrow">^</p>
     </button>
     <button className="keyboard-btn top-row-keyboard-btn">
       <p>{`>`}</p>
