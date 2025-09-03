@@ -1,10 +1,10 @@
-import React, {useRef,useEffect} from 'react'
+import React, {useRef,useState,useEffect} from 'react'
 import { useInView } from "react-intersection-observer";
 import gsap from "gsap"
 import "./Samples.css"
 
 const Samples = () => {
-    const samplesRef = useRef();
+    const [hasRendered,setHasRendered] = useState(false);
     const { ref, inView, entry } = useInView({
       /* Optional options */
       threshold: 0,
@@ -15,10 +15,11 @@ const Samples = () => {
     const tl = gsap.timeline();
 
     useEffect(()=>{
-        if(inView){
+        if(inView && !hasRendered){
             gsap.fromTo(h1RefOne.current,{transform:'translateY(50rem)'},{transform:'translateY(0rem)',duration:1,delay:.5})
             gsap.fromTo(h1RefThree.current,{transform:'translateY(30rem)'},{transform:'translateY(0rem)',duration:1})
             gsap.fromTo(h1RefTwo.current,{transform:'scale(0)'},{transform:'scale(1)',duration:1})
+            setHasRendered(true)
         }
     },[inView])
   return (
