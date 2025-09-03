@@ -6,6 +6,7 @@
   position: relative;
   /* border: 2px solid green; */
   height: 150px;
+  overflow: hidden;
 }
 
 .samples-header-h1-div {

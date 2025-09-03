@@ -16,9 +16,9 @@ const Samples = () => {
 
     useEffect(()=>{
         if(inView){
-            tl.fromTo(h1RefOne.current,{transform:'translateY(50rem)'},{transform:'translateY(0rem)',duration:1})
-            tl.fromTo(h1RefTwo.current,{transform:'translateY(30rem)'},{transform:'translateY(0rem)',duration:1})
-            tl.fromTo(h1RefThree.current,{transform:'scale(0)'},{transform:'scale(1)',duration:1})
+            gsap.fromTo(h1RefOne.current,{transform:'translateY(50rem)'},{transform:'translateY(0rem)',duration:1,delay:.5})
+            gsap.fromTo(h1RefThree.current,{transform:'translateY(30rem)'},{transform:'translateY(0rem)',duration:1})
+            gsap.fromTo(h1RefTwo.current,{transform:'scale(0)'},{transform:'scale(1)',duration:1})
         }
     },[inView])
   return (
