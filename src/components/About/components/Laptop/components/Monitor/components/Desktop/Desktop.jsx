@@ -23,7 +23,7 @@ const Desktop = ({inView}) => {
         if(inView){
             desktopRef.current.classList.add("show-desktop")
             desktopRef.current.querySelector(".google-chrome-icon").classList.add("bounce-icon")
-            console.log(desktopRef.current)
+            // console.log(desktopRef.current)
         }
     },[inView])
 
@@ -42,8 +42,7 @@ const Desktop = ({inView}) => {
             <div className="icons-row">
                 <ul className="desktop-icons">
                 <div className="browser-icons-banner"></div>
-
-                {desktopIcons.map((icon,idx)=>(
+                 {desktopIcons.map((icon,idx)=>(
                     <li key={idx} className={`desktop-icon-item`}>
                         <img className={`desktop-icon ${icon.className}`} src={icon.img} alt="desktop-icon"/>
                         {icon.title == "google chrome" && <BrowserWindow inView={inView}/>}

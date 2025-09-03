@@ -8,13 +8,13 @@ const HeroBottom = () => {
                 <div className="top-flex-row">
                     <div className="captions-box">
                         <div className="caption-div">
-                            <h3 style={{"--delay":"1s"}}><span className="bold">I</span>lluminate</h3>
+                            <h3 style={{"--delay":"1s"}}><span className="bold-caption-div-letter">I</span>lluminate</h3>
                         </div>
                         <div className="caption-div">
-                            <h3 style={{"--delay":"1.5s"}}><span className="bold">Y</span><em className="em-h3">our</em> Path</h3>
+                            <h3 style={{"--delay":"1.5s"}}><span className="bold-caption-div-letter">Y</span><em className="em-h3">our</em> Path</h3>
                         </div>
                         <div className="caption-div">
-                            <h3 style={{"--delay":"2s"}}><span className="bold">T</span>o <span className="shiny-success">Success</span></h3>
+                            <h3 style={{"--delay":"2s"}}><span className="bold-caption-div-letter">T</span>o <span className="shiny-success">Success</span></h3>
                         </div>
                     </div>
                     <div className="top-flex-title-div">

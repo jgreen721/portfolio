@@ -1,5 +1,5 @@
 import {useState} from "react"
-import {Hero,FixedMenu,About,Footer} from "./components"
+import {Hero,FixedMenu,About,Samples,Footer} from "./components"
 import './App.css'
 
 function App() {
@@ -12,7 +12,6 @@ function App() {
   onscroll=(e)=>{
     let headerHeight = 550;
     let percent = (window.pageYOffset/headerHeight).toFixed(2);
-    // console.log("percent",percent);
     let temp = 20 + (50 * percent);
     setCircleSize(`${temp}%`)
   }
@@ -28,9 +27,9 @@ function App() {
       <div className="app-content">
         <FixedMenu handleThemeChange={handleThemeChange} theme={theme}/>
           <Hero circleSize={circleSize}/>
+          <Samples/>
           <About/>
           <Footer/>
-          {/* <AboutMe/> */}
       </div>
     </div>
   )

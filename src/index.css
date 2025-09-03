@@ -26,13 +26,6 @@ html {
     210,
     210
   ); /*used for quotes to achieve 'transparent look' */
-
-  /* --black1: rgb(238, 255, 0);
-  --black2: rgb(114, 245, 205);
-  --middleblack: green; 
-  --white1: purple;
-  --white2: violet;
-  --middlewhite: pink; */
 }
 
 li {
@@ -67,6 +60,10 @@ p {
   font-size: 1.8rem;
 }
 
+.thin {
+  font-weight: 200;
+}
+
 @media screen and (max-width: 1050px) {
   :root {
     --mainPaddingX: 3.5rem;
@@ -84,7 +81,7 @@ p {
     --mainPaddingX: 2rem;
   }
   h1 {
-    font-size: 5rem;
+    font-size: 3.8rem;
   }
   h3 {
     font-size: 1.8rem;

@@ -1,18 +1,13 @@
 .laptop-parent {
-  /* border: 2px solid red; */
   position: relative;
-  /* width: clamp(75%, 500px, 100%); */
   max-width: 725px;
   margin: 0 auto;
 }
 
 .laptop {
-  /* height: 750px; */
   width: 100%;
-  /* border: 2px solid darkgray; */
   border-radius: 1rem;
   position: relative;
-  /* overflow: hidden; */
 }
 
 .laptop::after {
@@ -33,7 +28,7 @@
 }
 
 .open-laptop {
-  animation: openlaptop 1s 2s ease-out forwards;
+  animation: openlaptop 1s 1.5s ease-out forwards;
 }
 
 @keyframes openlaptop {
@@ -60,10 +55,6 @@
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   background: radial-gradient(var(--mainBg1), var(--mainBg2));
-  /* box-shadow: 0px 0px 1px black inset; */
-  /* border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-top: 1px solid black; */
   box-shadow: 0px -5px 2px rgba(25, 25, 25, 0.25) inset, 0px 0px 2px black inset;
   padding-bottom: 2rem;
   /* border: 5px solid orange; */
@@ -78,13 +69,11 @@
   transform: translateX(-50%);
   text-shadow: 0px 0px 5px var(--mainColor);
   bottom: 7.5px;
-  /* margin: 0.25rem 0; */
 }
 
 .laptop-bottom {
   height: 50%;
   width: 100%;
-  /* border: 2px solid blue; */
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -104,7 +93,6 @@
 .mouse-container {
   width: clamp(35%, 300px, 60%);
   height: 150px;
-  /* border: 2px solid black; */
   margin: 3rem 0;
   position: relative;
   border-radius: 0.5rem;

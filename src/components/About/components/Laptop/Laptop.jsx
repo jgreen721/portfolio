@@ -11,7 +11,7 @@ const Laptop = () => {
   });
 
   useEffect(()=>{
-    console.log(inView)
+    // console.log(inView)
     if(inView){
       laptopRef.current.querySelector(".laptop-top").classList.add("open-laptop");
     }

@@ -8,7 +8,7 @@
 }
 
 .show-desktop {
-  animation: showdesktop 1s 8s forwards;
+  animation: showdesktop 1s 5s forwards;
 }
 
 @keyframes showdesktop {
@@ -68,7 +68,7 @@
 
 .desktop-icons-shadow {
   position: absolute;
-  border: 3px solid green;
+  border: 3px solid limegreen;
   bottom: 0;
   display: flex;
   gap: 1rem;
@@ -85,8 +85,8 @@
 }
 
 .bounce-icon {
-  animation: bounceicon 1s 8.5s forwards;
-  animation-iteration-count: 5;
+  animation: bounceicon 1s 6.5s forwards;
+  animation-iteration-count: 4;
 }
 
 @keyframes bounceicon {
