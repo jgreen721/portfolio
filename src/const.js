@@ -26,7 +26,7 @@ export const samples = [
     img: connectFourDesktop,
     mobileImg: connectFourMobile,
     link: "https://connectfour-fechallenge.vercel.app/",
-    isFocused: true,
+    isFocused: false,
     offsetX: 0,
   },
   {
@@ -53,7 +53,7 @@ export const samples = [
     img: codingConfDesktop,
     mobileImg: codingConfMobile,
     link: "https://jgreen721.github.io/frontend_challenges/ticketgenerator-challenge/",
-    isFocused: false,
+    isFocused: true,
     offsetX: 3,
   },
 
@@ -65,6 +65,15 @@ export const samples = [
     link: "https://jgreen721.github.io/frontend_challenges/notificationAppRedo/",
     isFocused: false,
     offsetX: 4,
+  },
+  {
+    id: 6,
+    title: "notifications",
+    img: notificationsDesktop,
+    mobileImg: notificationsMobile,
+    link: "https://jgreen721.github.io/frontend_challenges/notificationAppRedo/",
+    isFocused: false,
+    offsetX: 5,
   },
 ];
 
