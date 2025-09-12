@@ -6,6 +6,10 @@
   gap: 1rem;
   width: 0px;
   overflow: hidden;
+  position: relative;
+  /* border: 5px solid orange; */
+  height: fit-content;
+  /* height: 600px; */
 }
 
 .grow-focused-area {
@@ -18,7 +22,7 @@
   }
 }
 .focused-laptop-container {
-  height: 400px;
+  height: 300px;
   width: 300px;
   /* border: 2px solid red; */
   position: relative;
@@ -60,7 +64,7 @@
 }
 
 .focused-laptop-top {
-  height: 50%;
+  height: 60%;
   /* border: 2px solid white; */
   width: 100%;
   position: relative;
@@ -85,7 +89,7 @@
 }
 
 .focused-laptop-bottom {
-  height: 50%;
+  height: 40%;
   /* border: 2px solid orange; */
   width: 100%;
   background: var(--mainBg2);

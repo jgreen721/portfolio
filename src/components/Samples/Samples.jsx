@@ -81,11 +81,11 @@ const Samples = () => {
            <div className="desktop-tablet"> <FocusedDisplay inView={inView} focused={focused}/> </div>
             <CarouselBtn handleAction={handleNext} btnText="Next"/>
         </div>
-        <div className="mobile">
+         <div className="mobile">
             <div className="mobile-laptop-row">
                  <FocusedDisplay inView={inView} focused={focused}/>
              </div>
-        </div>
+        </div> 
 
      
         </div>
