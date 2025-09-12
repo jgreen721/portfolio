@@ -8,7 +8,7 @@
 }
 
 .show-desktop {
-  animation: showdesktop 1s 5s forwards;
+  animation: showdesktop 1s 4.5s forwards;
 }
 
 @keyframes showdesktop {
@@ -85,8 +85,8 @@
 }
 
 .bounce-icon {
-  animation: bounceicon 1s 6.5s forwards;
-  animation-iteration-count: 4;
+  animation: bounceicon 1s 5s forwards;
+  animation-iteration-count: 3;
 }
 
 @keyframes bounceicon {

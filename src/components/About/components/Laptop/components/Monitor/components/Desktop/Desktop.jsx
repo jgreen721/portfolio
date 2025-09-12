@@ -6,7 +6,7 @@ import { GoFileDirectoryFill } from "react-icons/go";
 
 import "./Desktop.css"
 
-const Desktop = ({inView}) => {
+const Desktop = ({inView,focused}) => {
     const desktopRef = useRef();
   
 
@@ -45,7 +45,7 @@ const Desktop = ({inView}) => {
                  {desktopIcons.map((icon,idx)=>(
                     <li key={idx} className={`desktop-icon-item`}>
                         <img className={`desktop-icon ${icon.className}`} src={icon.img} alt="desktop-icon"/>
-                        {icon.title == "google chrome" && <BrowserWindow inView={inView}/>}
+                        {icon.title == "google chrome" && <BrowserWindow inView={inView} focused={focused}/>}
                     </li>
                 ))}
                 </ul>

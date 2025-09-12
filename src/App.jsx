@@ -5,6 +5,7 @@ import './App.css'
 function App() {
   const [theme,setTheme] = useState("light")
   const [circleSize,setCircleSize] = useState("20%")
+  const [focused,setFocused] = useState([]);
 
 
 
@@ -24,13 +25,15 @@ function App() {
 
   return (
     <div data-theme={theme} className="app">
-      <div className="app-content">
-        <FixedMenu handleThemeChange={handleThemeChange} theme={theme}/>
+      <FixedMenu handleThemeChange={handleThemeChange} theme={theme}/>
+        <div className="app-content">
           <Hero circleSize={circleSize}/>
+
           <Samples/>
-          <About/>
+          <About focused={focused}/>
+
           <Footer/>
-      </div>
+        </div>
     </div>
   )
 }

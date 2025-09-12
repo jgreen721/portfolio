@@ -1,0 +1,69 @@
+@property --btnglow {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.carousel-btn {
+  width: 200px;
+  height: 40px;
+  border-radius: 1rem;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+  border: none;
+  background: transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  position: relative;
+  background: conic-gradient(
+    from var(--btnglow),
+    var(--mainColor) 20%,
+    transparent 30%
+  );
+  border-radius: 1rem;
+}
+
+.carousel-btn:hover .carousel-btn-overlay {
+  filter: blur(5px);
+  animation: rotateglow 2s linear infinite;
+}
+
+.carousel-btn:hover {
+  transform: translateY(0.25rem);
+  box-shadow: 2px 2px 2px var(--mainColor), 2px 2px 15px var(--mainColor);
+}
+
+@keyframes rotateglow {
+  100% {
+    --btnglow: 360deg;
+  }
+}
+
+.carousel-btn-overlay {
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(
+    from var(--btnglow),
+    var(--mainColor) 20%,
+    transparent 30%
+  );
+  border-radius: 1rem;
+}
+
+.carousel-btn-content {
+  position: absolute;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  top: 2px;
+  left: 2px;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--mainBg1);
+  color: var(--mainColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}

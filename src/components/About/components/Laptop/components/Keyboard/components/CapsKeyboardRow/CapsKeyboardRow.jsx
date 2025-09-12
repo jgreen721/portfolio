@@ -43,7 +43,7 @@ const CapsKeyboardRow = () => {
       <p>{`"`}</p>
     </button>
   
-    <button className="top-row-keyboard-btn keyboard-btn flex-2-btn">
+    <button className="top-row-keyboard-btn keyboard-btn flex-2-btn mobile-btn">
         <p>Return</p>
     </button>
     </div>

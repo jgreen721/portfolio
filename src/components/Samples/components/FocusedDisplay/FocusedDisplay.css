@@ -1,0 +1,120 @@
+.focused-display-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 0px;
+  overflow: hidden;
+}
+
+.grow-focused-area {
+  animation: grow-width 1s 1.5s forwards;
+}
+
+@keyframes grow-width {
+  100% {
+    width: 335px;
+  }
+}
+.focused-laptop-container {
+  height: 400px;
+  width: 300px;
+  /* border: 2px solid red; */
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.focused-info-card {
+  /* border: 2px solid black; */
+  padding: 1rem;
+  background: var(--mainColor);
+  color: var(--mainBg1);
+  width: fit-content;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0px 0px 2px var(--mainBg2), 3px 4px 10px rgba(25, 25, 25, 0.5),
+    2px -2px 5px var(--mainBg1) inset;
+}
+
+.focused-title {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+
+.focused-description {
+  font-size: 1rem;
+  width: 200px;
+  margin: 0.5rem 0;
+}
+
+.focused-technologies {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 2rem;
+}
+
+.focused-link {
+  color: var(--mainColor1);
+}
+
+.focused-laptop-top {
+  height: 50%;
+  /* border: 2px solid white; */
+  width: 100%;
+  position: relative;
+  background: var(--mainBg2);
+}
+
+.focused-laptop-monitor {
+  position: absolute;
+  width: calc(100% - 15px);
+  height: calc(100% - 15px);
+  left: 7.5px;
+  top: 7.5px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  /* border: 2px solid black; */
+  background: silver;
+}
+
+.focused-laptop-img {
+  height: 100%;
+  width: 100%;
+}
+
+.focused-laptop-bottom {
+  height: 50%;
+  /* border: 2px solid orange; */
+  width: 100%;
+  background: var(--mainBg2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  transform: rotateX(75deg);
+  transform-origin: top;
+  box-shadow: 0px 4px 5px black, 2px -5px 10px rgba(25, 25, 25, 0.65) inset;
+}
+
+.focused-laptop-keyboard-container {
+  height: 65%;
+  width: 100%;
+  /* border: 2px solid red; */
+  margin-top: 0.5rem;
+  background: var(--mainBg1);
+  border-radius: 0.5rem;
+}
+
+.focused-laptop-mouse {
+  width: 33%;
+  height: 35%;
+  /* border: 1px solid black; */
+  background: var(--secondaryColor);
+  border-radius: 1rem;
+  box-shadow: 0px 5px 2px rgba(25, 25, 25, 1);
+}

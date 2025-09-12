@@ -45,13 +45,9 @@ header h4 {
   font-size: 2rem;
 }
 
-.user-info-col {
-  flex: 1;
-}
-
-.user-info-flex-1 {
-  /* flex: 1; */
-  margin: 0 1rem;
+.browserpage-header-text {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .header-icon-div {
@@ -66,9 +62,23 @@ header h4 {
   transform: scale(1.2);
 }
 
-.browserpage-header-text-row {
+.user-info-col {
+  flex: 1;
+  /* border: 1px solid red; */
+}
+
+.user-info-skills-section {
+  /* border: 2px solid blue; */
   display: flex;
-  gap: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img-info-section {
+  display: flex;
+  gap: 2rem;
+  /* border: 2px solid green; */
+  /* height: fit-content; */
 }
 
 .avatar-img {
@@ -94,22 +104,6 @@ header h4 {
   margin: 0.5rem;
 }
 
-.react-blue {
-  color: rgb(0, 102, 255);
-}
-
-.html-orange {
-  color: orange;
-}
-
-.css-blue {
-  color: blue;
-}
-
-.node-green {
-  color: limegreen;
-}
-
 .review-item {
   margin: 1rem 0;
 }
@@ -121,6 +115,16 @@ header h4 {
 .review-item p {
   font-size: 0.85rem;
 }
+
+.user-info-card {
+  display: flex;
+  /* border: 2px solid orange; */
+}
+
+/* .user-info-col {
+  display: flex;
+  gap: 1rem;
+} */
 
 @media screen and (max-width: 650px) {
   header h4 {
@@ -136,5 +140,10 @@ header h4 {
   .header-icon-div {
     font-size: 1.75rem;
     position: relative;
+  }
+
+  .user-info-card {
+    flex-direction: column;
+    padding: 1rem;
   }
 }

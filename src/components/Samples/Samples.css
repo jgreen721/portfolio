@@ -1,34 +1,6 @@
 .samples-container {
-  padding: 4rem 0;
-}
-
-.samples-header {
+  padding: 0rem var(--mainPaddingX);
   position: relative;
-  border: 2px solid green;
-  height: 250px;
-  overflow: hidden;
-}
-
-.samples-header-h1-div {
-  position: absolute;
-  color: var(--mainColor);
-}
-
-.samples-header-div-one {
-  transform: translateX(-120px) translateY(-45px);
-  z-index: 2;
-  text-shadow: 0px 0px 5px var(--mainBg1);
-}
-
-.samples-header-div-two {
-  transform: scale(3);
-  opacity: 50%;
-}
-
-.samples-header-div-three {
-  transform: translateX(120px) translateY(50px);
-  z-index: 2;
-  text-shadow: 0px 0px 5px var(--mainBg1);
 }
 
 .samples-main-content {
@@ -36,86 +8,109 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid green;
-  padding: 10rem 0;
-  perspective: 1000px;
+  perspective: var(--perspective);
+  transform: rotateX(90deg) translateY(20rem);
+  animation: growperspective 3s forwards;
 }
 
-.samples-carousel-container {
-  position: relative;
+@property --perspective {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 200px;
+}
+
+@keyframes growperspective {
+  100% {
+    transform: rotateX(0deg) translateY(0rem);
+    --perspective: 2000px;
+  }
+}
+
+.carousel-btns-row {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 800px;
-  height: 800px;
-  border: 2px solid red;
-  border-radius: 50%;
-  transform-style: preserve-3d;
-  transform: rotateX(75deg);
+  justify-content: space-evenly;
+  gap: 2rem;
+  position: relative;
+
+  /* height: 850px; */
 }
 
-.samples-carousel {
+/* .absolute-container {
   position: absolute;
-  inset: 0;
-  /* border: 2px solid blue; */
-  transform-style: preserve-3d;
 
-  border-radius: 50%;
-  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  /* animation: rotatecarousel 3s linear infinite; */
-}
-
-/* @keyframes rotatecarousel {
-  100% {
-    transform: rotate(360deg);
-  }
+  border: 2px solid green;
+  bottom: 0;
 } */
 
-.carousel-fill-in {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  filter: blur(50px);
-  background: orange;
-}
+/* .focused-sample-display-col {
+  flex: 1;
+  border: 2px solid red;
+  display: none;
+} */
 
-.sample-item {
-  position: absolute;
-  /* border: 3px solid yellow; */
-  border-radius: 50%;
-  inset: 0;
+/* .focused-sample-card {
   display: flex;
-  align-items: flex-start;
-  transform-style: preserve-3d;
-  justify-content: center;
-  /* transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+  gap: 1rem;
+  padding: 1rem;
+  transform: translateY(-35rem) scale(0);
+  display: none;
+} */
+
+/* .showfocused_sample {
+  animation: showfocused_sample 1s 2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    forwards;
 }
 
-/* style={{transform:`rotate(${sample.offsetX * (360/(samplesData.length))}deg)`}} */
-
-.sample-item-card {
-  position: relative;
-  border: 2px solid black;
+@keyframes showfocused_sample {
+  0% {
+    transform: scale(0.5) translateY(-35rem);
+  }
+  100% {
+    transform: scale(1) translateY(0rem);
+  }
+} */
+/* .focused-img-div {
   height: 300px;
-  width: 250px;
-  transform: translateY(-50%) rotateX(-90deg) rotateY(180deg);
-  background: white;
+  width: 400px;
+  position: relative;
+  border-bottom-right-radius: 2rem;
+  border-top-left-radius: 25%;
+  overflow: hidden;
+}
+
+.site-description {
+  width: 200px;
+  font-size: 1.2rem;
+}
+
+.focused-img-div img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+} */
+
+/* .focused-text-col {
+  text-align: center;
+}
+
+.technologies {
+  display: flex;
+  gap: 1rem;
+  font-size: 3rem;
+} */
+
+.mobile-laptop-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  width: 100%;
+  height: 250px;
+  transform: translateY(100px);
+  border: 2px solid pink;
 }
 
 @media screen and (max-width: 1050px) {
-  .samples-carousel-container {
-    height: 650px;
-    width: 650px;
-  }
-
-  .sample-item-card {
-    height: 250px;
-    width: 200px;
-  }
 }
 
 @media screen and (max-width: 650px) {
@@ -132,15 +127,5 @@
 
   .samples-header-div-three {
     transform: translateX(80px) translateY(50px);
-  }
-
-  .samples-carousel-container {
-    height: 450px;
-    width: 450px;
-  }
-
-  .sample-item-card {
-    height: 150px;
-    width: 100px;
   }
 }

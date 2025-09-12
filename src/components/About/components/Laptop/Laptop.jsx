@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { Keyboard,MousePad,Monitor } from './components/'
 import "./Laptop.css"
 
-const Laptop = () => {
+const Laptop = ({focused}) => {
   const laptopRef = useRef();
   const { ref, inView, entry } = useInView({
     /* Optional options */
@@ -23,7 +23,7 @@ const Laptop = () => {
           <div className="laptop-top-back-shell"></div>
           <div className="laptop-top-front">
             <div className="laptop-monitor">
-              <Monitor inView={inView}/>
+              <Monitor focused={focused} inView={inView}/>
             </div>
             <h5 className="macbook-air-text">Macbook Air</h5>
           </div>

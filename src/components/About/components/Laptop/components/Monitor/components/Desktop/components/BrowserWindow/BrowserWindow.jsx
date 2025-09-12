@@ -4,7 +4,7 @@ import "./BrowserWindow.css"
 
 
 
-const BrowserWindow = ({inView}) => {
+const BrowserWindow = ({inView,focused}) => {
   const browserRef = useRef();
 
 
@@ -23,8 +23,8 @@ const BrowserWindow = ({inView}) => {
             <div className="browser-tab">
               <p>google- Google Search</p>
             </div>
-            <BrowserRow/>
-            <BrowserPage/>
+            <BrowserRow focused={focused}/>
+            <BrowserPage focused={focused}/>
           </div>
       </div>
     </div>

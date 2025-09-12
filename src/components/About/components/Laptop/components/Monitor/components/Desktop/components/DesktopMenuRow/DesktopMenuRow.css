@@ -34,4 +34,8 @@
   .menu-list p {
     font-size: 0.85rem;
   }
+
+  .flex-row {
+    gap: 0.5rem;
+  }
 }

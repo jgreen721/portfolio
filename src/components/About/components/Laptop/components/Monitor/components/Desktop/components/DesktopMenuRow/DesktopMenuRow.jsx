@@ -8,7 +8,7 @@ const DesktopMenuRow = () => {
         {id:2,name:"File"},
         {id:3,name:"Edit"},
         {id:4,name:"View"},
-        {id:5,name:"History"},
+        // {id:5,name:"History"},
         {id:7,name:"Help"},
     ]
 

@@ -24,6 +24,8 @@
 .app {
   --primaryFont: var(--mozillaText);
   --secondaryFont: var(--outfitText);
+  font-family: var(--primaryFont);
+
   background: linear-gradient(var(--mainBg1), var(--mainBg2));
 }
 
@@ -31,5 +33,42 @@
   max-width: 144rem;
   margin: 0 auto;
   position: relative;
-  font-family: var(--primaryFont);
+  overflow: hidden;
+}
+
+.react-blue {
+  color: rgb(0, 102, 255);
+}
+
+.html-orange {
+  color: orange;
+}
+
+.css-blue {
+  color: blue;
+}
+
+.js-yellow {
+  color: yellow;
+}
+
+.node-green {
+  color: limegreen;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop-tablet {
+  display: block;
+}
+
+@media screen and (max-width: 650px) {
+  .desktop-tablet {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
 }

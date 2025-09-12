@@ -37,18 +37,13 @@ const TopKeyboardRow = () => {
     <button className="keyboard-btn top-row-keyboard-btn">
       <p>F10</p>
     </button>
-    <button className="keyboard-btn top-row-keyboard-btn">
+    <button className="keyboard-btn top-row-keyboard-btn mobile-btn">
       <p>F11</p>
     </button>
-    <button className="keyboard-btn top-row-keyboard-btn">
+    <button className="keyboard-btn top-row-keyboard-btn mobile-btn">
       <p>F12</p>
     </button>
-    {/* <button className="top-row-keyboard-btn invisible-btn"></button> */}
-    {/* <button className="top-row-keyboard-btn invisible-btn"></button> */}
-    {/* <button className="top-row-keyboard-btn power-btn">
-      <div className="power-btn-icon">
-      </div>
-    </button> */}
+ 
 
 
   </div>

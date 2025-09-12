@@ -4,7 +4,7 @@ import { GoArrowLeft,GoArrowRight } from "react-icons/go";
 import { MdRefresh } from "react-icons/md";
 import "./BrowserRow.css"
 
-const BrowserRow = () => {
+const BrowserRow = ({focused}) => {
 
     const browserIcons = [
         {id:1,icon:<GoArrowLeft/>},
@@ -21,6 +21,7 @@ const BrowserRow = () => {
               ))}
             </ul>
             <div className="browser-search-input">
+              {/* {focused ? focused.link.length > 25 ? `${focused.link.slice(0,25)}...` : focused.link  : 'https://hire-a-dev.com/jgreen721'} */}
               https://hire-a-dev.com/jgreen721
             </div>
             <div className="hamburger-dots">

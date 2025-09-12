@@ -1,94 +1,120 @@
 import React, {useRef,useState,useEffect} from 'react'
+import {Carousel,SamplesHeader,CarouselBtn,FocusedDisplay} from "./components"
 import { useInView } from "react-intersection-observer";
 import {samples} from "../../const"
 import gsap from "gsap"
+// const samples = [];
 import "./Samples.css"
 
 const Samples = () => {
     const [hasRendered,setHasRendered] = useState(false);
-    const { ref, inView, entry } = useInView({
-      /* Optional options */
-      threshold: 0,
-    });
-    const h1RefOne = useRef();
-    const h1RefTwo = useRef();
-    const h1RefThree = useRef();
-    const tl = gsap.timeline();
     const [samplesData,setSamplesData] = useState(samples);
-    const carouselRef = useRef();
     const [rotation,setRotation] = useState(0);
+    const [focused,setFocused] = useState(samples.filter(sample=>sample.isFocused)[0])
+    const { ref, inView, entry } = useInView({
+        /* Optional options */
+        threshold: 0,
+      });
+    const focusedRef = useRef();
+
+
+
 
     useEffect(()=>{
         if(inView && !hasRendered){
-            gsap.fromTo(h1RefOne.current,{transform:'translateY(50rem)'},{transform:'translateY(0rem)',duration:1,delay:.5})
-            gsap.fromTo(h1RefThree.current,{transform:'translateY(30rem)'},{transform:'translateY(0rem)',duration:1})
-            gsap.fromTo(h1RefTwo.current,{transform:'scale(0)'},{transform:'scale(1)',duration:1})
+            // gsap.to(focusedRef.current,{transform:'scale(1)',translateY:0,duration:1})
             setHasRendered(true)
         }
     },[inView])
 
 
+    // useEffect(()=>{
+    //     gsap.fromTo(focusedRef.current,{scale:.25,translateY:"-30rem",filter:"blur(20px)"},{transform:'scale(1)',translateY:0,filter:"blur(0px)",duration:.5})
+    //     console.log('fire focused---')
+    // },[focused]);
+
+
     const handlePrev=()=>{
-        setSamplesData((samplesData)=>samplesData.map((s)=>({...s,offsetX:s.offsetX%samplesData.length - 1})))
         let temp = rotation;
-        temp = temp == 360 ? 325 : temp-(360/samplesData.length);
+        temp-=60;
         setRotation(temp);
-        console.log(temp);
-        carouselRef.current.style.transform = `rotate(${temp}deg)`
+        let focusedIdx = samplesData.findIndex(s=>s.isFocused);
+        let tempData = samplesData;
+        tempData[focusedIdx].isFocused = false;
+      
+        tempData[focusedIdx == samplesData.length-1 ? 0 : ++focusedIdx].isFocused = true;
+        console.log(focusedIdx);
+        setSamplesData(tempData);
+
+
+        let tempFocused = tempData.filter(t=>t.isFocused)[0]
+        setFocused(tempFocused)
+
+
     }
 
 
     const handleNext=()=>{
-        setSamplesData((samplesData)=>samplesData.map((s)=>({...s,offsetX:s.offsetX%samplesData.length + 1})))
         let temp = rotation;
-        temp = temp == 360 ? 325 : temp +(360/samplesData.length);
+        temp+=60;
         setRotation(temp);
-        console.log(temp);
-        carouselRef.current.style.transform = `rotate(${temp}deg)`
+        let focusedIdx = samplesData.findIndex(s=>s.isFocused);
+        let tempData = samplesData;
+        tempData[focusedIdx].isFocused = false;
+      
+        tempData[focusedIdx == 0 ? samplesData.length-1 : --focusedIdx].isFocused = true;
+        console.log(focusedIdx);
+        setSamplesData(tempData);
+
+
+        let tempFocused = tempData.filter(t=>t.isFocused)[0]
+        setFocused(tempFocused)
+
     }
   return (
     <div ref={ref} className="samples-container">
         <div className="samples-content">
-        <header className="samples-header">
-            <div className="samples-header-h1-div samples-header-div-one">
-                <h1 ref={h1RefOne} className="samples-header-h1 samples-header-h1-one">Projects</h1>
-            </div>
-            <div className="samples-header-h1-div samples-header-div-two">
-                <h1 ref={h1RefTwo} className="samples-header-h1 samples-header-h1-two">&</h1>
-            </div>
-            <div className="samples-header-h1-div samples-header-div-three">
-                <h1 ref={h1RefThree} className="samples-header-h1 samples-header-h1-three">Samples</h1>
-            </div>
-        </header>
-
-        <div className="samples-main-content">
-            <div className="samples-carousel-container">
-            <ul ref={carouselRef} className="samples-carousel">
-                <div className="carousel-fill-in"></div>
-                    {samplesData.map((sample,idx)=>(
-                        <li style={{transform:`rotate(${idx * (360/(samplesData.length))}deg)`}}
-                        key={sample.id} className="sample-item">
-                            <div className="sample-item-card">
-                                <div className="sample-item-content">
-                                    <div className="sample-img-div">
-                                        {/* <img src={sample.img} alt="img" /> */}
-                                    </div>
-                                    <h4>{sample.title}</h4>
-                                </div>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        </div>
-
+        <SamplesHeader inView={inView} hasRendered={hasRendered}/>
+        <Carousel samplesData={samplesData} rotation={rotation}/>
         <div className="carousel-btns-row">
-            <button onClick={handlePrev}>Prev</button>
-            <button onClick={handleNext}>Next</button>
+            <CarouselBtn handleAction={handlePrev} btnText="Prev"/>
+           <div className="desktop-tablet"> <FocusedDisplay inView={inView} focused={focused}/> </div>
+            <CarouselBtn handleAction={handleNext} btnText="Next"/>
         </div>
+        <div className="mobile">
+            <div className="mobile-laptop-row">
+                 <FocusedDisplay inView={inView} focused={focused}/>
+             </div>
+        </div>
+
+     
         </div>
     </div>
   )
 }
 
 export default Samples
+
+
+
+      {/* <div className="focused-sample-display-col">
+                <div ref={focusedRef} className="focused-sample-card">
+                    <div className="focused-img-div">
+                        <img src={focused.img} alt="" />
+                    </div>
+                    <div className="focused-text-col">
+                        <h5>{focused.title}</h5>
+                        <p className="site-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, a hic libero nostrum molestiae recusandae ratione, voluptas, error laudantium tempora nesciunt amet pariatur.</p>
+                        <div className="site-link-div">
+                            <a target="_blank" href={focused.link}>Visit</a>
+                        </div>
+                        <ul className="technologies">
+                            {focused.technologies.map((technology,idx)=>(
+                                <li className={`${technology.color}`} key={idx}>
+                                    {iconMap[technology.name]}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </div> */}

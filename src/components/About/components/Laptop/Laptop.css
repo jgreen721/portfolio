@@ -28,7 +28,7 @@
 }
 
 .open-laptop {
-  animation: openlaptop 1s 1.5s ease-out forwards;
+  animation: openlaptop 1s 1s ease-out forwards;
 }
 
 @keyframes openlaptop {

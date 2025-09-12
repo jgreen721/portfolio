@@ -9,7 +9,7 @@
 }
 
 .open-browser-tab {
-  animation: openbrowsertab 1s 10s forwards;
+  animation: openbrowsertab 1s 7s forwards;
 }
 
 @keyframes openbrowsertab {
