@@ -15,14 +15,14 @@ const Samples = () => {
         /* Optional options */
         threshold: 0,
       });
-    const focusedRef = useRef();
+    const carouselRef = useRef();
 
 
 
 
     useEffect(()=>{
         if(inView && !hasRendered){
-            // gsap.to(focusedRef.current,{transform:'scale(1)',translateY:0,duration:1})
+            gsap.fromTo(carouselRef.current,{translateY:200,opacity:0},{translateY:0,opacity:1,duration:2})
             setHasRendered(true)
         }
     },[inView])
@@ -75,7 +75,9 @@ const Samples = () => {
     <div ref={ref} className="samples-container">
         <div className="samples-content">
         <SamplesHeader inView={inView} hasRendered={hasRendered}/>
+        <div ref={carouselRef}>
         <Carousel samplesData={samplesData} rotation={rotation}/>
+        </div>
         <div className="carousel-btns-row">
             <CarouselBtn handleAction={handlePrev} btnText="Prev"/>
            <div className="desktop-tablet"> <FocusedDisplay inView={inView} focused={focused}/> </div>

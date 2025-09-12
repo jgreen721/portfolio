@@ -1,6 +1,7 @@
 import React, {useEffect,useRef} from 'react'
 import { useInView } from "react-intersection-observer";
 import { Keyboard,MousePad,Monitor } from './components/'
+import gsap from "gsap"
 import "./Laptop.css"
 
 const Laptop = ({focused}) => {
@@ -13,7 +14,9 @@ const Laptop = ({focused}) => {
   useEffect(()=>{
     // console.log(inView)
     if(inView){
+      gsap.fromTo(laptopRef.current,{translateY:500},{translateY:0,duration:1})
       laptopRef.current.querySelector(".laptop-top").classList.add("open-laptop");
+
     }
   },[inView])
   return (

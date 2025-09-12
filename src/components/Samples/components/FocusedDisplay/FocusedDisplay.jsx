@@ -22,6 +22,10 @@ useEffect(()=>{
       focusedRef.current.classList.add("grow-focused-area");
   }
 },[inView])
+
+useEffect(()=>{
+   gsap.fromTo(focusedRef.current,{opacity:0,translateY:-300},{opacity:1,translateY:0,duration:1})
+},[focused])
   return (
     <div ref={focusedRef} className="focused-display-container">
       <div ref={infoRef} className="focused-info-card">
