@@ -28,10 +28,7 @@ const Samples = () => {
     },[inView])
 
 
-    // useEffect(()=>{
-    //     gsap.fromTo(focusedRef.current,{scale:.25,translateY:"-30rem",filter:"blur(20px)"},{transform:'scale(1)',translateY:0,filter:"blur(0px)",duration:.5})
-    //     console.log('fire focused---')
-    // },[focused]);
+ 
 
 
     const handlePrev=()=>{

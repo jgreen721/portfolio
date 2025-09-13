@@ -1,0 +1,172 @@
+.contact-section {
+  display: flex;
+  padding: 5rem var(--mainPaddingX);
+}
+
+.contact-col {
+  flex: 1;
+  /* border: 2px solid black; */
+  /* padding: 2rem; */
+  position: relative;
+}
+
+.envelope-parent-div {
+  position: relative;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.envelope-container {
+  width: clamp(55%, 450px, 100%);
+  height: 300px;
+  /* border: 2px solid red; */
+  position: relative;
+  padding: 1rem;
+}
+
+.envelope {
+  width: 100%;
+  height: 225px;
+  border-radius: 0.25rem;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(180deg);
+}
+
+.envelope-side {
+  position: absolute;
+  inset: 0;
+  border-radius: 0.25rem;
+}
+
+.envelope-front {
+  background: white;
+}
+
+.envelope-front::after {
+  content: "";
+  width: 55.25%;
+  height: 2px;
+  background: lightgray;
+  position: absolute;
+  transform-origin: left;
+  transform: rotate(25deg);
+}
+.envelope-front::before {
+  content: "";
+  width: 55.25%;
+  right: 0;
+  height: 2px;
+  background: lightgray;
+  position: absolute;
+  transform-origin: right;
+  transform: rotate(-25deg);
+}
+
+.envelope-back {
+  background: white;
+  transform: rotateX(180deg);
+  backface-visibility: hidden;
+  text-transform: capitalize;
+}
+
+.contact-form {
+  padding: 1.5rem;
+}
+
+.from-envelope-div {
+  padding: 1rem;
+}
+
+.subject-envelope-div {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stamp-div {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1rem;
+}
+
+.stamp {
+  background: var(--mainColor);
+  color: var(--mainBg1);
+  position: relative;
+  padding: 0.5rem;
+  box-shadow: 0px 0px 2px rgba(25, 25, 25, 0.85);
+}
+.stamp p {
+  position: absolute;
+  bottom: 0;
+  text-shadow: 0px 0px 1px var(--mainColor);
+  font-size: 1rem;
+  right: 0;
+  bottom: 0.5rem;
+}
+
+.form-div {
+  margin: 1rem 0;
+}
+
+.form-div label {
+  display: block;
+}
+
+.form-div p {
+  margin: 0.5rem 0;
+  color: var(--mainColor);
+  text-shadow: 0px 0px 2px var(--mainBg1);
+}
+
+.form-control {
+  padding: 1rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--mainColor);
+  box-shadow: 0px 5px 10px var(--mainColor);
+  border-radius: 0.5rem;
+  background: var(--mainBg1);
+}
+
+.form-text {
+  width: 100%;
+  resize: none;
+  height: 125px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: var(--mainBg1);
+  outline: none;
+  border: none;
+  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--mainColor);
+  box-shadow: 0px 5px 10px var(--mainColor);
+  font-family: var(--primaryFont);
+}
+
+.contact-btn {
+  width: 200px;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 1050px) {
+  .contact-section {
+    flex-direction: column;
+  }
+
+  .contact-col {
+    padding: 0rem;
+  }
+
+  .envelope-parent-div {
+    padding: 0.5rem;
+  }
+}

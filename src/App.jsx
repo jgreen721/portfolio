@@ -1,5 +1,5 @@
 import {useState} from "react"
-import {Hero,FixedMenu,About,Samples,Footer} from "./components"
+import {Hero,FixedMenu,About,Samples,Contact,Footer} from "./components"
 import './App.css'
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
 
           <Samples/>
           <About focused={focused}/>
-
+          <Contact/>
           <Footer/>
         </div>
     </div>

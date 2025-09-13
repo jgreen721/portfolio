@@ -85,7 +85,7 @@ p {
 
 @media screen and (max-width: 650px) {
   :root {
-    --mainPaddingX: 2rem;
+    --mainPaddingX: 1.25rem;
   }
   h1 {
     font-size: 3.8rem;
